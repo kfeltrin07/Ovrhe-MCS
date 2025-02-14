@@ -173,11 +173,42 @@ export class GlobalVariablesService {
 
 
   public sidebarItems: SidebarItem[] = [
-
+    {
+      namePrefix: '',
+      name: 'General',
+      icon: null,
+      highlighted: false,
+      rightsState: 1,
+      open: true,
+      children: [
+        /*{
+          namePrefix: '0.1',
+          name: 'Dashboard',
+          icon: 'dashboard',
+          url: '/dashboard',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },*/
+        {
+          namePrefix: '',
+          name: 'SelectionScreen',
+          icon: 'menu',
+          url: '/selection-screen',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        }
+      ],
+    },
   ];
 
   public dynamicMenuReferences: DynamicMenuReference[] = [
-
+    {
+      componentName: 'selection-screen',
+      componentDatabaseName: 'bilokojadozvola',
+      url: '/selection-screen'
+    },
   ];
 
   public dashboardItems: DashboardItem[] = [
