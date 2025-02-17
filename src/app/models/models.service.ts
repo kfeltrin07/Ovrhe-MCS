@@ -24,6 +24,22 @@ export enum RightsState {
 }
 // END: enums
 
+// START: MODELS
+export interface VrsteRadnji {
+  UKUPANBROJSLOGOVA: number,
+  RN: number,
+  SIFVLAS: string,
+  IDVRSTARADNJE: string,
+  NAZIVVRSTERADNJE: string,
+  OPISVRSTERADNJE: string,
+  SISTEMSKAVRSTA: string,
+  IDTVRTKE: string,
+  AKTIVNOST: string,
+  IDKORISNIKA: string,
+  SYSDATETIME: string
+}
+
+// END: MODELS
 // START: session user
 export interface SessionUser {
   ID?: number;

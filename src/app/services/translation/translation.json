@@ -8169,6 +8169,54 @@
           "en": "Notification templates",
           "hr": "Predlošci obavijesti",
           "transferred": false
+        },
+        {
+          "ref": "NAZIVVRSTERADNJE",
+          "en": "Type of action",
+          "hr": "Vrsta radnje",
+          "transferred": false
+        },
+        {
+          "ref": "IDVRSTARADNJE",
+          "en": "Code",
+          "hr": "Šifra",
+          "transferred": false
+        },
+        {
+          "ref": "OPISVRSTERADNJE",
+          "en": "Description",
+          "hr": "Opis",
+          "transferred": false
+        },
+        {
+          "ref": "SISTEMSKAVRSTA",
+          "en": "System type",
+          "hr": "Sistemska vrsta",
+          "transferred": false
+        },
+        {
+          "ref": "IDTVRTKE",
+          "en": "Company ID",
+          "hr": "ID tvrtke",
+          "transferred": false
+        },
+        {
+          "ref": "AKTIVNOST",
+          "en": "Activity",
+          "hr": "Aktivnost",
+          "transferred": false
+        },
+        {
+          "ref": "VrsteRadnjiCreation",
+          "en": "Creating types of actions",
+          "hr": "Kreiranje vrste radnji",
+          "transferred": false
+        },
+        {
+          "ref": "VrsteRadnjiEditing",
+          "en": "Editing types of actions",
+          "hr": "Uređivanje vrste radnji",
+          "transferred": false
         }
     ]
 }

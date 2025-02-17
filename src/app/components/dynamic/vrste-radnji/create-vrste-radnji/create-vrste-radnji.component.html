@@ -1,0 +1,83 @@
+<div class="colored-header text-align-center">
+    {{ 'Creation' | translate }}
+</div>
+
+<mat-dialog-content class="small-margin-and-center-title">
+
+    <h2 mat-dialog-title class="text-align-center">
+        <mat-icon class="dialog-title-icon">person</mat-icon>
+        <mat-icon class="dialog-title-icon">add</mat-icon>
+        <span class="dialog-title">{{ 'VrsteRadnjiCreation' | translate }}</span>
+    </h2>
+
+
+    <div class="form-container">
+        <table>
+            <tr>
+                <td>
+                    <label for="IDVRSTARADNJE" class="minimum-margin-top">{{ 'Code' | translate }}:</label>
+                </td>
+                <td>
+                    <input id="IDVRSTARADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.IDVRSTARADNJE"
+                        [class.input-color-valid]="vrsteRadnji!.IDVRSTARADNJE"
+                        [class.red-input]="!globalFn.checkValidity(vrsteRadnji!.IDVRSTARADNJE)"
+                        placeholder="{{ 'Code' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="NAZIVVRSTERADNJE" class="minimum-margin-top">{{ 'Name' | translate }}:</label>
+                </td>
+                <td>
+                    <input id="NAZIVVRSTERADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.NAZIVVRSTERADNJE"
+                        [class.input-color-valid]="vrsteRadnji!.NAZIVVRSTERADNJE"
+                        [class.red-input]="!globalFn.checkValidity(vrsteRadnji!.NAZIVVRSTERADNJE)"
+                        placeholder="{{ 'Name' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="OPISVRSTERADNJE" class="minimum-margin-top">{{ 'OPISVRSTERADNJE' | translate }}:</label>
+                </td>
+                <td>
+                    <input id="OPISVRSTERADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.OPISVRSTERADNJE"
+                        placeholder="{{ 'OPISVRSTERADNJE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="SISTEMSKAVRSTA" class="minimum-margin-top">{{ 'SISTEMSKAVRSTA' | translate }}:</label>
+                </td>
+                <td>
+                    <input id="SISTEMSKAVRSTA" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.SISTEMSKAVRSTA"
+                        placeholder="{{ 'SISTEMSKAVRSTA' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="IDTVRTKE" class="minimum-margin-top">{{ 'IDTVRTKE' | translate }}:</label>
+                </td>
+                <td>
+                    <input id="IDTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.IDTVRTKE"
+                        placeholder="{{ 'IDTVRTKE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="AKTIVNOST" class="minimum-margin-top">{{ 'AKTIVNOST' | translate }}:</label>
+                </td>
+                <td>
+                    <input id="AKTIVNOST" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.AKTIVNOST"
+                        placeholder="{{ 'AKTIVNOST' | translate }}">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true">{{ 'Cancel' | translate }}</button>
+    <button mat-raised-button type="button" color="primary" [mat-dialog-close]="true" (click)="save();"
+        [disabled]="validateForm(vrsteRadnji!)">{{ 'Create' | translate }}</button>
+</mat-dialog-actions>

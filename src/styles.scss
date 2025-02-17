@@ -2429,3 +2429,12 @@ app-konto .mat-column-charts-of-accounts-name {
     max-width: 950px !important;
     max-height: 300px !important;
 }
+
+.mat-mdc-select-panel{
+    max-width: 500px;
+}
+
+.cdk-overlay-pane{
+    width: unset !important;
+    max-width: 500px;
+}

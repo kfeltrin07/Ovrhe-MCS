@@ -170,7 +170,75 @@ export class GlobalVariablesService {
   //
   //DISPLAYED COLUMNS
 
+  public IDKORISNIKAColumn: ColumnRef = {
+    displayedName: 'IDKORISNIKA',
+    name: 'IDKORISNIKA'
+  };
 
+  public SYSDATETIMEColumn: ColumnRef = {
+    displayedName: 'SYSDATETIME',
+    name: 'SYSDATETIME'
+  };
+
+  public RNColumn: ColumnRef = {
+    displayedName: 'RN',
+    name: 'RN'
+  };
+
+  public SIFVLASColumn: ColumnRef = {
+    displayedName: 'SIFVLAS',
+    name: 'SIFVLAS'
+  };
+
+  public IDVRSTARADNJEColumn: ColumnRef = {
+    displayedName: 'IDVRSTARADNJE',
+    name: 'IDVRSTARADNJE'
+  };
+
+  public NAZIVVRSTERADNJEColumn: ColumnRef = {
+    displayedName: 'NAZIVVRSTERADNJE',
+    name: 'NAZIVVRSTERADNJE'
+  };
+
+  public OPISVRSTERADNJEColumn: ColumnRef = {
+    displayedName: 'OPISVRSTERADNJE',
+    name: 'OPISVRSTERADNJE'
+  };
+
+  public SISTEMSKAVRSTAColumn: ColumnRef = {
+    displayedName: 'SISTEMSKAVRSTA',
+    name: 'SISTEMSKAVRSTA'
+  };
+
+  public IDTVRTKEColumn: ColumnRef = {
+    displayedName: 'IDTVRTKE',
+    name: 'IDTVRTKE'
+  };
+
+  public AKTIVNOSTColumn: ColumnRef = {
+    displayedName: 'AKTIVNOST',
+    name: 'AKTIVNOST'
+  };
+
+  public VrsteRadnjiDisplayedColumns: ColumnRef[] = [
+    this.IDVRSTARADNJEColumn,
+    this.NAZIVVRSTERADNJEColumn,
+    this.SISTEMSKAVRSTAColumn,
+    this.AKTIVNOSTColumn,
+    this.OPISVRSTERADNJEColumn,
+  ]
+
+  public VrsteRadnjiColumnsList: ColumnRef[] = [
+    this.SIFVLASColumn,
+    this.IDVRSTARADNJEColumn,
+    this.NAZIVVRSTERADNJEColumn,
+    this.SISTEMSKAVRSTAColumn,
+    this.AKTIVNOSTColumn,
+    this.OPISVRSTERADNJEColumn,
+    this.IDTVRTKEColumn,
+    this.IDKORISNIKAColumn,
+    this.SYSDATETIMEColumn,
+  ]
 
   public sidebarItems: SidebarItem[] = [
     {
