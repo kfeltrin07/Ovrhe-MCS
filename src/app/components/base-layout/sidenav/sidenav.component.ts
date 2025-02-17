@@ -148,6 +148,7 @@ export class SidenavComponent implements OnInit, AfterViewInit {
   public goToRoute(sidebarItem: SidebarItem): void {
     if (sidebarItem.url && !(!sidebarItem.open && sidebarItem.children)) {
       if (!sidebarItem.dialogComponent) {
+        console.log("navigating")
         this.router.navigate([sidebarItem.url]);
         if (this.globalVar.VrstaUredaja) {
           this.sidenav.close();

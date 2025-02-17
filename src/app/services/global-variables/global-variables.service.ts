@@ -201,6 +201,115 @@ export class GlobalVariablesService {
         }
       ],
     },
+    {
+      namePrefix: '',
+      name: 'Ovrhe',
+      icon: 'gavel',
+      highlighted: false,
+      rightsState: 1,
+      open: false,
+      url: '/ovrhe'
+    },
+    {
+      namePrefix: '',
+      name: 'Izvjestaji',
+      icon: 'now_widgets',
+      highlighted: false,
+      rightsState: 1,
+      open: false,
+      url: '/izvjestaji'
+    },
+    {
+      namePrefix: '',
+      name: 'Codebooks',
+      icon: '',
+      highlighted: false,
+      rightsState: 1,
+      open: false,
+      children: [
+        {
+          namePrefix: '',
+          name: 'VrsteRadnji',
+          icon: 'post_add',
+          url: '/vrste-radnji',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'StatusiRadnji',
+          icon: 'layers',
+          url: '/statusi-radnji',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'StatusiOvrhe',
+          icon: 'local_library',
+          url: '/statusi-ovrhe',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'TipOvrhe',
+          icon: 'grid_3x3',
+          url: '/tip-ovrhe',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'GrupaTroskova',
+          icon: 'account_balance_wallet',
+          url: '/grupe-troskova',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'Troskovi',
+          icon: 'credit_card',
+          url: '/troskovi',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'PredlosciZaKretaljku',
+          icon: 'bookmarks',
+          url: '/predlosci-za-kretaljku',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'KamatneStope',
+          icon: 'show_chart',
+          url: '/kamatne-stope',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+        {
+          namePrefix: '',
+          name: 'PredlosciObavijesti',
+          icon: 'feed',
+          url: '/predlosci-obavijesti',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+      ]
+    },
   ];
 
   public dynamicMenuReferences: DynamicMenuReference[] = [

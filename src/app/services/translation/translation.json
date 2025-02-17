@@ -8109,6 +8109,66 @@
           "en": "Recapitulation",
           "hr": "Rekapitulacija",
           "transferred": false
+        },
+        {
+          "ref": "VrsteRadnji",
+          "en": "Types of actions",
+          "hr": "Vrste radnji",
+          "transferred": false
+        },
+        {
+          "ref": "Izvjestaji",
+          "en": "Reports",
+          "hr": "Izvještaji",
+          "transferred": false
+        },
+        {
+          "ref": "StatusiRadnji",
+          "en": "Action statuses",
+          "hr": "Statusi radnji",
+          "transferred": false
+        },
+        {
+          "ref": "StatusiOvrhe",
+          "en": "Enforcement statuses",
+          "hr": "Statusi ovrhe",
+          "transferred": false
+        },
+        {
+          "ref": "TipOvrhe",
+          "en": "Enforcement type",
+          "hr": "Tip ovrhe",
+          "transferred": false
+        },
+        {
+          "ref": "GrupaTroskova",
+          "en": "Cost group",
+          "hr": "Grupa troškova",
+          "transferred": false
+        },
+        {
+          "ref": "Troskovi",
+          "en": "Costs",
+          "hr": "Troškovi",
+          "transferred": false
+        },
+        {
+          "ref": "PredlosciZaKretaljku",
+          "en": "Templates for the invoice",
+          "hr": "Predlošci za kretaljku",
+          "transferred": false
+        },
+        {
+          "ref": "KamatneStope",
+          "en": "Interest rates",
+          "hr": "Kamatne stope",
+          "transferred": false
+        },
+        {
+          "ref": "PredlosciObavijesti",
+          "en": "Notification templates",
+          "hr": "Predlošci obavijesti",
+          "transferred": false
         }
     ]
 }

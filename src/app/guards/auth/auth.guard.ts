@@ -53,7 +53,7 @@ export function noLoginGuard(): CanActivateFn {
     if (cookies.getCookie('logged-in-user-session-id') == '') {
       return true;
     }
-    globalFn.goToRoute('/dashboard');
+    globalFn.goToRoute('/selection-screen');
     return false;
   };
 

@@ -116,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ovrhe:build:production"
+              "buildTarget": "ovrhe:build:production"
             },
             "development": {
-              "browserTarget": "ovrhe:build:development"
+              "buildTarget": "ovrhe:build:development"
             },
             "cistoca": {
-              "browserTarget": "ovrhe:build:cistoca"
+              "buildTarget": "ovrhe:build:cistoca"
             },
             "mcs": {
-              "browserTarget": "ovrhe:build:mcs"
+              "buildTarget": "ovrhe:build:mcs"
             }
           },
           "defaultConfiguration": "development"
@@ -133,7 +133,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ovrhe:build"
+            "buildTarget": "ovrhe:build"
           }
         },
         "test": {
