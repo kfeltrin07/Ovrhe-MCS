@@ -1,0 +1,131 @@
+<div class="colored-header text-align-center" cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle cdkDragBoundary=".cdk-overlay-container">
+    {{ 'Creating' | translate }}
+    <mat-icon class="dialog-close-button" mat-dialog-close >close</mat-icon>
+
+</div>
+
+<mat-dialog-content class="small-margin-and-center-title">
+
+    <h2 mat-dialog-title class="text-align-center">
+        <mat-icon class="dialog-title-icon">person</mat-icon>
+        <mat-icon class="dialog-title-icon">add</mat-icon>
+        <span class="dialog-title">{{ 'StatusiRadnjiCreation' | translate }}</span>
+    </h2>
+
+
+    <div class="form-container">
+        <table>
+            <tr>
+                <td>
+                    <label for="IDSTATUSARADNJE" class="minimum-margin-top">{{ 'Code' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="IDSTATUSARADNJE" class="minimum-margin width-276-px" [(ngModel)]="statusiRadnji!.IDSTATUSARADNJE"
+                        [class.input-color-valid]="statusiRadnji!.IDSTATUSARADNJE"
+                        [class.red-input]="!globalFn.checkValidity(statusiRadnji!.IDSTATUSARADNJE)"
+                        placeholder="{{ 'Code' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="NAZIVSTATUSA" class="minimum-margin-top">{{ 'Name' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="NAZIVSTATUSA" class="minimum-margin width-276-px" [(ngModel)]="statusiRadnji!.NAZIVSTATUSA"
+                        [class.input-color-valid]="statusiRadnji!.NAZIVSTATUSA"
+                        [class.red-input]="!globalFn.checkValidity(statusiRadnji!.NAZIVSTATUSA)"
+                        placeholder="{{ 'Name' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="JEZAPOCETO" class="minimum-margin-top">{{ 'JEZAPOCETO' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="JEZAPOCETO" class="minimum-margin width-276-px" [(ngModel)]="statusiRadnji!.JEZAPOCETO"
+                        placeholder="{{ 'JEZAPOCETO' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="JEZAVRSENO" class="minimum-margin-top">{{ 'JEZAVRSENO' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="JEZAVRSENO" class="minimum-margin width-276-px" [(ngModel)]="statusiRadnji!.JEZAVRSENO"
+                        placeholder="{{ 'JEZAVRSENO' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="SISTEMSKISTATUS" class="minimum-margin-top">{{ 'SISTEMSKISTATUS' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="SISTEMSKISTATUS" class="minimum-margin width-276-px" [(ngModel)]="statusiRadnji!.SISTEMSKISTATUS"
+                        placeholder="{{ 'SISTEMSKISTATUS' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="IDTVRTKE" class="minimum-margin-top">{{ 'IDTVRTKE' | translate }}:</label>
+                </td>
+                <td>
+                    <mat-icon matSuffix class="minimum-margin-left cursor-pointer display-flex" (click)="pickTvrtke();"
+                        (contextmenu)="removeTvrtke($event)"
+                        matTooltip="{{ (!statusiRadnji.IDTVRTKE ? 'ClickToSelectFromDialogToFill' : '') | translate }}"
+                        [class.color-valid]="varNames.NAZIVTVRTKE">
+                        {{ varNames!.NAZIVTVRTKE ? 'done' : 'import_contacts'}}
+                    </mat-icon>
+                </td>
+                <td class="resultTD">
+                    <span (click)="refreshTvrtke(statusiRadnji!.IDTVRTKE, false);">
+                        <input [class.red-input]="!globalFn.checkValidity(statusiRadnji!.IDTVRTKE)" type="text"
+                            [(ngModel)]="statusiRadnji!.IDTVRTKE" maxlength="22"
+                            class="minimum-margin-horizontal light-gray-background" style="width: 50px;"
+                            placeholder="{{ 'Code' | translate }}" id="offeredTvrtke-help-span"
+                            (blur)="OfferedTvrtke();resetTvrtkeIndex();" (ngModelChange)="filterTvrtke(statusiRadnji!.IDTVRTKE);"
+                            (focus)="refreshTvrtke(statusiRadnji!.IDTVRTKE, false);"
+                            (keyup.enter)="selectTvrtke(offeredTvrtke[TvrtkeDropdownIndex]);"
+                            (keyup.escape)="resetTvrtkeIndex();"
+                            (keyup.arrowdown)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex + 1) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);"
+                            (keyup.arrowup)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex - 1 + offeredTvrtke.length) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);">
+                        <div id="offeredTvrtke-dropdown" class="select-dropdown-content max-height-300px"
+                            style="z-index: 500;">
+                            <div [id]="'offeredTvrtke-dropdown-' + i" *ngFor="let konto of offeredTvrtke; index as i"
+                                matRipple class="dropdown-content-item display-flex align-items-center space-between"
+                                [class.gray-background]="i == TvrtkeDropdownIndex" (mousedown)="selectTvrtke(konto);">
+                                <span>
+                                    <b>{{ konto.IDTVRTKE }}</b> ({{ konto.NAZIVTVRTKE }})
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="small-margin-left margin-right" matTooltip="{{ varNames!.NAZIVTVRTKE }}"
+                        matTooltipShowDelay="1000">{{
+                        varNames!.NAZIVTVRTKE }}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="AKTIVNOST" class="minimum-margin-top">{{ 'AKTIVNOST' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="AKTIVNOST" class="minimum-margin width-276-px" [(ngModel)]="statusiRadnji!.AKTIVNOST"
+                        placeholder="{{ 'AKTIVNOST' | translate }}">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true">{{ 'Cancel' | translate }}</button>
+    <button mat-raised-button type="button" color="primary" [mat-dialog-close]="true" (click)="save();"
+        [disabled]="validateForm(statusiRadnji!)">{{ 'Create' | translate }}</button>
+</mat-dialog-actions>

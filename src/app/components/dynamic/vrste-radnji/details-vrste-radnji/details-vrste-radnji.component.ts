@@ -1,3 +1,4 @@
+import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, EventEmitter, Inject, OnInit, Output } from '@angular/core';
@@ -10,7 +11,6 @@ import { VrsteRadnji } from 'src/app/models/models.service';
 import { TranslationPipe } from 'src/app/pipes/translation/translation.pipe';
 import { GlobalVariablesService } from 'src/app/services/global-variables/global-variables.service';
 import { SessionService } from 'src/app/services/session/session.service';
-import {CdkDrag, CdkDragHandle} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-details-vrste-radnji',

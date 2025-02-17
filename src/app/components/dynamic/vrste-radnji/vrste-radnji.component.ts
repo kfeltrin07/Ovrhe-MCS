@@ -1,29 +1,29 @@
-import { Component, OnInit } from '@angular/core';
-import { Sorting, VrsteRadnji } from 'src/app/models/models.service';
-import { CreateVrsteRadnjiComponent } from './create-vrste-radnji/create-vrste-radnji.component';
-import { DetailsVrsteRadnjiComponent } from './details-vrste-radnji/details-vrste-radnji.component';
-import { EditVrsteRadnjiComponent } from './edit-vrste-radnji/edit-vrste-radnji.component';
-import { DeleteVrsteRadnjiComponent } from './delete-vrste-radnji/delete-vrste-radnji.component';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { MatLabel } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { Sorting, VrsteRadnji } from 'src/app/models/models.service';
 import { TranslationPipe } from 'src/app/pipes/translation/translation.pipe';
 import { GlobalFunctionsService } from 'src/app/services/global-functions/global-functions.service';
 import { GlobalVariablesService } from 'src/app/services/global-variables/global-variables.service';
 import { SessionService } from 'src/app/services/session/session.service';
 import { PaginationComponent } from '../../elements/pagination/pagination.component';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatTableModule } from '@angular/material/table';
-import { MatSortModule } from '@angular/material/sort';
+import { CreateVrsteRadnjiComponent } from './create-vrste-radnji/create-vrste-radnji.component';
+import { DeleteVrsteRadnjiComponent } from './delete-vrste-radnji/delete-vrste-radnji.component';
+import { DetailsVrsteRadnjiComponent } from './details-vrste-radnji/details-vrste-radnji.component';
+import { EditVrsteRadnjiComponent } from './edit-vrste-radnji/edit-vrste-radnji.component';
 
 @Component({
   selector: 'app-vrste-radnji',
@@ -159,7 +159,7 @@ export class VrsteRadnjiComponent implements OnInit {
 
   public openDeleteDialog(item: any): void {
     const dialogRef = this.dialog.open(DeleteVrsteRadnjiComponent, {
-      data: item.SIFLOKACIJE
+      data: item
     });
     dialogRef.afterClosed().subscribe((result) => {
       setTimeout(() => this.refresh(), 1000);

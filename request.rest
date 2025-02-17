@@ -1,0 +1,324 @@
+//GET OVR_Vrste Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action": "Ovrhe",
+  "method": "getOVR_VrsteRadnji",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data": {
+    "pDioNaziva": "",
+    "limit": 10,
+    "page": 1,
+    "sort": [
+      {
+        "property": "IDVRSTARADNJE",
+        "direction": "ASC"
+      }
+    ]
+  }
+}
+
+// INSERT OVR_Vrste Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_VrsteRadnji",
+  "sid": "rr65v7cf22t94qhv0dqds3ggfp",
+  "data" : {
+    "pAkcija": 1,
+    "pIdVrstaRadnje": "77",
+    "pNazivVrsteRadnje": "TEST vrste rad.",
+    "pOpisVrsteRadnje": "TEST vrste rad.",
+    "pSistemskaVrsta": "1",
+    "pIdTvrtke": "4",
+    "pAktivnost": "0"
+  }
+}
+
+// UPDATE OVR_Vrste Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_VrsteRadnji",
+  "sid": "rr65v7cf22t94qhv0dqds3ggfp",
+  "data" : {
+    "pAkcija": 2,
+    "pIdVrstaRadnje": "77",
+    "pNazivVrsteRadnje": "TEST vrste rad. 1",
+    "pOpisVrsteRadnje": "TEST vrste rad. 1",
+    "pSistemskaVrsta": "2",
+    "pIdTvrtke": "3",
+    "pAktivnost": "1"
+  }
+}
+
+// DELETE OVR_Vrste Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_VrsteRadnji",
+  "sid": "rr65v7cf22t94qhv0dqds3ggfp",
+  "data" : {
+    "pAkcija": 0,
+    "pIdVrstaRadnje": "77"
+  }
+}
+
+/GET OVR_Status Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action": "Ovrhe",
+  "method": "getOVR_StatusRadnji",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data": {
+    "pDioNaziva": "",
+    "limit": 10,
+    "page": 1,
+    "sort": [
+      {
+        "property": "IDSTATUSARADNJE",
+        "direction": "ASC"
+      }
+    ]
+  }
+}
+
+// INSERT OVR_Status Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_StatusRadnji",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 1,
+    "pIdStatusRadnje": "77",
+    "pNazivStatusa": "TEST STAT.",
+    "pJeZapoceto": "0",
+    "pJeZavrseno": "0",
+    "pSistemskiStatus": "0",
+    "pIdTvrtke": "4",
+    "pAktivnost": "0"
+  }
+}
+// UPDATE OVR_Status Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_StatusRadnji",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 2,
+    "pIdStatusRadnje": "77",
+    "pNazivStatusa": "TEST STAT. UPD",
+    "pJeZapoceto": "1",
+    "pJeZavrseno": "1",
+    "pSistemskiStatus": "1",
+    "pIdTvrtke": "3",
+    "pAktivnost": "1"
+  }
+}
+// DELETE OVR_Status Radnji
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_StatusRadnji",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 0,
+    "pIdStatusRadnje": "77"
+  }
+}
+//GET OVR_Tip Ovrhe
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action": "Ovrhe",
+  "method": "getOVR_TipOvrhe",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data": {
+    "pDioNaziva": "",
+    "limit": 10,
+    "page": 1,
+    "sort": [
+      {
+        "property": "IDTIPOVRHE",
+        "direction": "ASC"
+      }
+    ]
+  }
+}
+
+//INSERT OVR_Tip Ovrhe
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_TipOvrhe",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 1,
+    "pIdTipOvrhe": "77",
+    "pNazivTipOvrhe": "TEST Tip ovrh.",
+    "pOznakaTipaOvrhe": "test",
+    "pIdTvrtke": "4",
+    "pPrefixPnb": "test",
+    "pKonto": "test",
+    "pProtuKonto": "test",
+    "pTipDokumentaErp": "test"
+  }
+}
+//UPDATE OVR_Tip Ovrhe
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_TipOvrhe",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 2,
+    "pIdTipOvrhe": "77",
+    "pNazivTipOvrhe": "TEST Tip ovrh. UPD",
+    "pOznakaTipaOvrhe": "test  UPD",
+    "pIdTvrtke": "3",
+    "pPrefixPnb": "test  UPD",
+    "pKonto": "test UPD",
+    "pProtuKonto": "test UPD",
+    "pTipDokumentaErp": "test UPD"
+  }
+}
+//DELETE OVR_Tip Ovrhe
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_TipOvrhe",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 0,
+    "pIdTipOvrhe": "77"
+  }
+}
+
+
+// GET OVR_Tvrtke
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action": "Ovrhe",
+  "method": "getOVR_Tvrtke",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data": {
+    "pDioNaziva": "",
+    "limit": 10,
+    "page": 1,
+    "sort": [
+      {
+        "property": "IDTVRTKE",
+        "direction": "ASC"
+      }
+    ]
+  }
+}
+
+// INSERT OVR_Tvrtke
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_Tvrtke",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data" : {
+    "pAkcija": 1,
+    "pIdTvrtke": "77",
+    "pNazivTvrtke": "Test tvrtke",
+    "pAdresaTvrtke": "Testna adresa",
+    "pAktivnost": "0",
+    "pBazaErp": "0",
+    "pBazaLocal": "0",
+    "pConnStringErp": "0",
+    "pConnStringLocal": "0",
+    "pBrojNeplacenihRacuna": "0",
+    "pOibTvrtke": "0",
+    "pMaticniBrojTvrtke": "0",
+    "pPredlozakOvrhe": "0",
+    "pNazivTvrtkeOvrsitelja": "0",
+    "pAdresaTvrtkeOvrsitelja": "0",
+    "pIbanTvrtkeOvrsitelja": "0",
+    "pKontoUplate": "0",
+    "pPnbPrefixPravneOsobe": "0",
+    "pPnbPrefixFizickeOsobe": "0",
+    "pIbanKartica": "0"
+  }
+}
+// UPDATE OVR_Tvrtke
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_Tvrtke",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data" : {
+    "pAkcija": 2,
+    "pIdTvrtke": "77",
+    "pNazivTvrtke": "Test tvrtke UPD",
+    "pAdresaTvrtke": "Testna adresa UPD ",
+    "pAktivnost": "1",
+    "pBazaErp": "1",
+    "pBazaLocal": "1",
+    "pConnStringErp": "1",
+    "pConnStringLocal": "1",
+    "pBrojNeplacenihRacuna": "1",
+    "pOibTvrtke": "1",
+    "pMaticniBrojTvrtke": "1",
+    "pPredlozakOvrhe": "1",
+    "pNazivTvrtkeOvrsitelja": "1",
+    "pAdresaTvrtkeOvrsitelja": "1",
+    "pIbanTvrtkeOvrsitelja": "1",
+    "pKontoUplate": "1",
+    "pPnbPrefixPravneOsobe": "1",
+    "pPnbPrefixFizickeOsobe": "1",
+    "pIbanKartica": "1"
+  }
+}
+// DELETE OVR_Tvrtke
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_Tvrtke",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data" : {
+    "pAkcija": 0,
+    "pIdTvrtke": "77"
+  }
+}

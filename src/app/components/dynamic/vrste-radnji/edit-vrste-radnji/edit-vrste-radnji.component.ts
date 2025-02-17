@@ -1,6 +1,7 @@
+import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
@@ -9,7 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatTooltipModule } from '@angular/material/tooltip';
-import { VrsteRadnji, CRUDAction } from 'src/app/models/models.service';
+import { CRUDAction, VrsteRadnji } from 'src/app/models/models.service';
 import { TranslationPipe } from 'src/app/pipes/translation/translation.pipe';
 import { GlobalFunctionsService } from 'src/app/services/global-functions/global-functions.service';
 import { GlobalVariablesService } from 'src/app/services/global-variables/global-variables.service';
@@ -31,13 +32,15 @@ import { CreateVrsteRadnjiComponent } from '../create-vrste-radnji/create-vrste-
 
     TranslationPipe,
     CommonModule,
-    FormsModule
+    FormsModule,
+    CdkDrag,
+    CdkDragHandle
   ],
   templateUrl: './edit-vrste-radnji.component.html',
   styleUrl: './edit-vrste-radnji.component.scss'
 })
-export class EditVrsteRadnjiComponent {
-public vrsteRadnji: VrsteRadnji = {
+export class EditVrsteRadnjiComponent implements OnInit {
+  public vrsteRadnji: VrsteRadnji = {
     UKUPANBROJSLOGOVA: 0,
     RN: 0,
     SIFVLAS: '',
@@ -61,7 +64,7 @@ public vrsteRadnji: VrsteRadnji = {
     public session: SessionService
   ) { }
 
-  public ngOnInit(): void { 
+  public ngOnInit(): void {
     this.vrsteRadnji = this.receivedVrsteRadnji;
   }
 

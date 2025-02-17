@@ -8081,142 +8081,322 @@
             "transferred": false
         },
         {
-          "ref": "NePostojePodaciPremaPretraženimParametrima",
-          "en": "No data according to the search parameters",
-          "hr": "Ne postoje podaci prema pretraženim parametrima",
-          "transferred": false
+            "ref": "NePostojePodaciPremaPretraženimParametrima",
+            "en": "No data according to the search parameters",
+            "hr": "Ne postoje podaci prema pretraženim parametrima",
+            "transferred": false
         },
         {
-          "ref": "SIFRA_RAD",
-          "en": "WW",
-          "hr": "VP",
-          "transferred": false
+            "ref": "SIFRA_RAD",
+            "en": "WW",
+            "hr": "VP",
+            "transferred": false
         },
         {
-          "ref": "PORUKA",
-          "en": "Message",
-          "hr": "Poruka",
-          "transferred": false
+            "ref": "PORUKA",
+            "en": "Message",
+            "hr": "Poruka",
+            "transferred": false
         },
         {
-          "ref": "NAZ_MT",
-          "en": "Place of expense",
-          "hr": "Mjesto troška",
-          "transferred": false
+            "ref": "NAZ_MT",
+            "en": "Place of expense",
+            "hr": "Mjesto troška",
+            "transferred": false
         },
         {
-          "ref": "Rekapitulacija",
-          "en": "Recapitulation",
-          "hr": "Rekapitulacija",
-          "transferred": false
+            "ref": "Rekapitulacija",
+            "en": "Recapitulation",
+            "hr": "Rekapitulacija",
+            "transferred": false
         },
         {
-          "ref": "VrsteRadnji",
-          "en": "Types of actions",
-          "hr": "Vrste radnji",
-          "transferred": false
+            "ref": "VrsteRadnji",
+            "en": "Types of actions",
+            "hr": "Vrste radnji",
+            "transferred": false
         },
         {
-          "ref": "Izvjestaji",
-          "en": "Reports",
-          "hr": "Izvještaji",
-          "transferred": false
+            "ref": "Izvjestaji",
+            "en": "Reports",
+            "hr": "Izvještaji",
+            "transferred": false
         },
         {
-          "ref": "StatusiRadnji",
-          "en": "Action statuses",
-          "hr": "Statusi radnji",
-          "transferred": false
+            "ref": "StatusiRadnji",
+            "en": "Action statuses",
+            "hr": "Statusi radnji",
+            "transferred": false
         },
         {
-          "ref": "StatusiOvrhe",
-          "en": "Enforcement statuses",
-          "hr": "Statusi ovrhe",
-          "transferred": false
+            "ref": "StatusiOvrhe",
+            "en": "Enforcement statuses",
+            "hr": "Statusi ovrhe",
+            "transferred": false
         },
         {
-          "ref": "TipOvrhe",
-          "en": "Enforcement type",
-          "hr": "Tip ovrhe",
-          "transferred": false
+            "ref": "TipOvrhe",
+            "en": "Enforcement type",
+            "hr": "Tip ovrhe",
+            "transferred": false
         },
         {
-          "ref": "GrupaTroskova",
-          "en": "Cost group",
-          "hr": "Grupa troškova",
-          "transferred": false
+            "ref": "GrupaTroskova",
+            "en": "Cost group",
+            "hr": "Grupa troškova",
+            "transferred": false
         },
         {
-          "ref": "Troskovi",
-          "en": "Costs",
-          "hr": "Troškovi",
-          "transferred": false
+            "ref": "Troskovi",
+            "en": "Costs",
+            "hr": "Troškovi",
+            "transferred": false
         },
         {
-          "ref": "PredlosciZaKretaljku",
-          "en": "Templates for the invoice",
-          "hr": "Predlošci za kretaljku",
-          "transferred": false
+            "ref": "PredlosciZaKretaljku",
+            "en": "Templates for the invoice",
+            "hr": "Predlošci za kretaljku",
+            "transferred": false
         },
         {
-          "ref": "KamatneStope",
-          "en": "Interest rates",
-          "hr": "Kamatne stope",
-          "transferred": false
+            "ref": "KamatneStope",
+            "en": "Interest rates",
+            "hr": "Kamatne stope",
+            "transferred": false
         },
         {
-          "ref": "PredlosciObavijesti",
-          "en": "Notification templates",
-          "hr": "Predlošci obavijesti",
-          "transferred": false
+            "ref": "PredlosciObavijesti",
+            "en": "Notification templates",
+            "hr": "Predlošci obavijesti",
+            "transferred": false
         },
         {
-          "ref": "NAZIVVRSTERADNJE",
-          "en": "Type of action",
-          "hr": "Vrsta radnje",
-          "transferred": false
+            "ref": "NAZIVVRSTERADNJE",
+            "en": "Type of action",
+            "hr": "Vrsta radnje",
+            "transferred": false
         },
         {
-          "ref": "IDVRSTARADNJE",
-          "en": "Code",
-          "hr": "Šifra",
-          "transferred": false
+            "ref": "IDVRSTARADNJE",
+            "en": "Code",
+            "hr": "Šifra",
+            "transferred": false
         },
         {
-          "ref": "OPISVRSTERADNJE",
-          "en": "Description",
-          "hr": "Opis",
-          "transferred": false
+            "ref": "OPISVRSTERADNJE",
+            "en": "Description",
+            "hr": "Opis",
+            "transferred": false
         },
         {
-          "ref": "SISTEMSKAVRSTA",
-          "en": "System type",
-          "hr": "Sistemska vrsta",
-          "transferred": false
+            "ref": "SISTEMSKAVRSTA",
+            "en": "System type",
+            "hr": "Sistemska vrsta",
+            "transferred": false
         },
         {
-          "ref": "IDTVRTKE",
-          "en": "Company ID",
-          "hr": "ID tvrtke",
-          "transferred": false
+            "ref": "IDTVRTKE",
+            "en": "Company ID",
+            "hr": "ID tvrtke",
+            "transferred": false
         },
         {
-          "ref": "AKTIVNOST",
-          "en": "Activity",
-          "hr": "Aktivnost",
-          "transferred": false
+            "ref": "AKTIVNOST",
+            "en": "Activity",
+            "hr": "Aktivnost",
+            "transferred": false
         },
         {
-          "ref": "VrsteRadnjiCreation",
-          "en": "Creating types of actions",
-          "hr": "Kreiranje vrste radnji",
-          "transferred": false
+            "ref": "VrsteRadnjiCreation",
+            "en": "Creating types of actions",
+            "hr": "Kreiranje vrste radnji",
+            "transferred": false
         },
         {
-          "ref": "VrsteRadnjiEditing",
-          "en": "Editing types of actions",
-          "hr": "Uređivanje vrste radnji",
-          "transferred": false
+            "ref": "VrsteRadnjiEditing",
+            "en": "Editing types of actions",
+            "hr": "Uređivanje vrste radnji",
+            "transferred": false
+        },
+        {
+            "ref": "IDSTATUSARADNJE",
+            "en": "Action status ID",
+            "hr": "ID statusa radnje",
+            "transferred": false
+        },
+        {
+            "ref": "JEZAPOCETO",
+            "en": "Is started",
+            "hr": "Je započeto",
+            "transferred": false
+        },
+        {
+            "ref": "JEZAVRSENO",
+            "en": "Is finished",
+            "hr": "Je završeno",
+            "transferred": false
+        },
+        {
+            "ref": "NAZIVSTATUSA",
+            "en": "Status name",
+            "hr": "Naziv statusa",
+            "transferred": false
+        },
+        {
+            "ref": "SISTEMSKISTATUS",
+            "en": "System status",
+            "hr": "Sistemski status",
+            "transferred": false
+        },
+        {
+            "ref": "IDTIPOVRHE",
+            "en": "Enforcement type ID",
+            "hr": "ID tipa ovrhe",
+            "transferred": false
+        },
+        {
+            "ref": "NAZIVTIPAOVRHE",
+            "en": "Enforcement type name",
+            "hr": "Naziv tipa",
+            "transferred": false
+        },
+        {
+            "ref": "OZNAKATIPAOVRHE",
+            "en": "Enforcement type mark",
+            "hr": "Oznaka tipa ovrhe",
+            "transferred": false
+        },
+        {
+            "ref": "PREFIXPNB",
+            "en": "Prefix PNB",
+            "hr": "Prefix PNB",
+            "transferred": false
+        },
+        {
+            "ref": "KONTO",
+            "en": "Code",
+            "hr": "Konto",
+            "transferred": false
+        },
+        {
+            "ref": "PROTUKONTO",
+            "en": "Counter code",
+            "hr": "Protu konto",
+            "transferred": false
+        },
+        {
+            "ref": "TIPDOKUMENTAERP",
+            "en": "Document type ERP",
+            "hr": "Tip dokumenta ERP",
+            "transferred": false
+        },
+        {
+            "ref": "Administration",
+            "en": "Administration",
+            "hr": "Administracija",
+            "transferred": false
+        },
+        {
+            "ref": "Tvrtke",
+            "en": "Companies",
+            "hr": "Tvrtke",
+            "transferred": false
+        },
+        {
+            "ref": "TvrtkeCreation",
+            "en": "Creating companies",
+            "hr": "Kreiranje tvrtke",
+            "transferred": false
+        },
+        {
+            "ref": "ADRESATVRTKE",
+            "en": "Company address",
+            "hr": "Adresa tvrtke",
+            "transferred": false
+        },
+        {
+            "ref": "BAZAERP",
+            "en": "ERP database",
+            "hr": "Baza ERP",
+            "transferred": false
+        },
+        {
+            "ref": "BAZALOCAL",
+            "en": "Local database",
+            "hr": "Lokalna baza",
+            "transferred": false
+        },
+        {
+            "ref": "CONNSTRINGERP",
+            "en": "ERP connection string",
+            "hr": "ERP konekcijski string",
+            "transferred": false
+        },
+        {
+            "ref": "CONNSTRINGLOCAL",
+            "en": "Local connection string",
+            "hr": "Lokalni konekcijski string",
+            "transferred": false
+        },
+        {
+            "ref": "BROJNEPLACENIHRACUNA",
+            "en": "Number of unpaid invoices",
+            "hr": "Broj neplaćenih računa",
+            "transferred": false
+        },
+        {
+            "ref": "OIBTVRTKE",
+            "en": "Company OIB",
+            "hr": "OIB tvrtke",
+            "transferred": false
+        },
+        {
+            "ref": "MATICNIBROJTVRTKE",
+            "en": "Company registration number",
+            "hr": "Matični broj tvrtke",
+            "transferred": false
+        },
+        {
+            "ref": "NAZIVTVRTKEOVRSITELJA",
+            "en": "Enforcement company name",
+            "hr": "Naziv tvrtke ovršitelja",
+            "transferred": false
+        },
+        {
+            "ref": "ADRESATVRTKEOVRSITELJA",
+            "en": "Enforcement company address",
+            "hr": "Adresa tvrtke ovršitelja",
+            "transferred": false
+        },
+        {
+            "ref": "IBANTVRTKEOVRSITELJA",
+            "en": "Enforcement company IBAN",
+            "hr": "IBAN tvrtke ovršitelja",
+            "transferred": false
+        },
+        {
+            "ref": "PNBPREFIXPRAVNEOSOBE",
+            "en": "Legal entity PNB prefix",
+            "hr": "PNB prefix pravne osobe",
+            "transferred": false
+        },
+        {
+            "ref": "PNBPREFIXFIZICKEOSOBE",
+            "en": "Natural person PNB prefix",
+            "hr": "PNB prefix fizičke osobe",
+            "transferred": false
+        },
+        {
+            "ref": "IBANKARTICA",
+            "en": "Bank card",
+            "hr": "IBAN kartica",
+            "transferred": false
+        },
+        {
+            "ref": "TvrtkeEditing",
+            "en": "Editing companies",
+            "hr": "Uređivanje tvrtke",
+            "transferred": false
         }
     ]
 }

@@ -240,6 +240,293 @@ export class GlobalVariablesService {
     this.SYSDATETIMEColumn,
   ]
 
+  public IDSTATUSARADNJEColumn: ColumnRef = {
+    displayedName: 'IDSTATUSARADNJE',
+    name: 'IDSTATUSARADNJE'
+  };
+
+  public NAZIVSTATUSAColumn: ColumnRef = {
+    displayedName: 'NAZIVSTATUSA',
+    name: 'NAZIVSTATUSA'
+  };
+
+  public JEZAPOCETOColumn: ColumnRef = {
+    displayedName: 'JEZAPOCETO',
+    name: 'JEZAPOCETO'
+  };
+
+  public JEZAVRSENOColumn: ColumnRef = {
+    displayedName: 'JEZAVRSENO',
+    name: 'JEZAVRSENO'
+  };
+
+  public SISTEMSKISTATUSColumn: ColumnRef = {
+    displayedName: 'SISTEMSKISTATUS',
+    name: 'SISTEMSKISTATUS'
+  };
+
+  public StatusiRadnjiDisplayedColumns: ColumnRef[] = [
+    this.IDSTATUSARADNJEColumn,
+    this.NAZIVSTATUSAColumn,
+    this.IDTVRTKEColumn,
+    this.JEZAPOCETOColumn,
+    this.JEZAVRSENOColumn,
+    this.SISTEMSKISTATUSColumn,
+    this.AKTIVNOSTColumn
+  ]
+
+  public StatusiRadnjiColumnsList: ColumnRef[] = [
+    this.SIFVLASColumn,
+    this.IDSTATUSARADNJEColumn,
+    this.NAZIVSTATUSAColumn,
+    this.JEZAPOCETOColumn,
+    this.JEZAVRSENOColumn,
+    this.SISTEMSKISTATUSColumn,
+    this.IDTVRTKEColumn,
+    this.AKTIVNOSTColumn,
+    this.IDKORISNIKAColumn,
+    this.SYSDATETIMEColumn,
+  ]
+
+  public IDTIPOVRHEColumn: ColumnRef = {
+    displayedName: 'IDTIPOVRHE',
+    name: 'IDTIPOVRHE'
+  };
+
+  public NAZIVTIPAOVRHEColumn: ColumnRef = {
+    displayedName: 'NAZIVTIPAOVRHE',
+    name: 'NAZIVTIPAOVRHE'
+  };
+
+  public OZNAKATIPAOVRHEColumn: ColumnRef = {
+    displayedName: 'OZNAKATIPAOVRHE',
+    name: 'OZNAKATIPAOVRHE'
+  };
+
+  public PREFIXPNBColumn: ColumnRef = {
+    displayedName: 'PREFIXPNB',
+    name: 'PREFIXPNB'
+  };
+
+  public KONTOColumn: ColumnRef = {
+    displayedName: 'KONTO',
+    name: 'KONTO'
+  };
+
+  public PROTUKONTOColumn: ColumnRef = {
+    displayedName: 'PROTUKONTO',
+    name: 'PROTUKONTO'
+  };
+
+  public TIPDOKUMENTAERPColumn: ColumnRef = {
+    displayedName: 'TIPDOKUMENTAERP',
+    name: 'TIPDOKUMENTAERP'
+  };
+
+  public TipOvrheDisplayedColumns: ColumnRef[] = [
+    this.IDTIPOVRHEColumn,
+    this.NAZIVTIPAOVRHEColumn,
+    this.PREFIXPNBColumn,
+    this.KONTOColumn,
+    this.PROTUKONTOColumn,
+    this.TIPDOKUMENTAERPColumn,
+    this.OZNAKATIPAOVRHEColumn,
+  ]
+
+  public TipOvrheColumnsList: ColumnRef[] = [
+    this.SIFVLASColumn,
+    this.IDTIPOVRHEColumn,
+    this.NAZIVTIPAOVRHEColumn,
+    this.PREFIXPNBColumn,
+    this.KONTOColumn,
+    this.PROTUKONTOColumn,
+    this.TIPDOKUMENTAERPColumn,
+    this.OZNAKATIPAOVRHEColumn,
+    this.IDTVRTKEColumn,
+    this.IDKORISNIKAColumn,
+    this.SYSDATETIMEColumn,
+  ]
+
+  public KontoSifColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsSif',
+    name: 'charts-of-accounts-sif'
+  };
+  public KontoNameColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsName',
+    name: 'charts-of-accounts-name'
+  };
+  public KontoAccountBalancesColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsAccountBalances',
+    name: 'charts-of-accounts-account-balances'
+  };
+  public KontoBalanceIndicatorColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsBalanceIndicator',
+    name: 'charts-of-accounts-balance-indicator'
+  };
+  public KontoForeignExchangeIndicatorColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsForeignExchangeIndicator',
+    name: 'charts-of-accounts-foreign-exchange-indicator'
+  };
+  public KontoIncomeOrExpenditureIndicatorColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsIncomeOrExpenditureIndicator',
+    name: 'charts-of-accounts-income-or-expenditure-indicator'
+  };
+  public KontoIndicatorOJColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsIndicatorOJ',
+    name: 'charts-of-accounts-indicator-OJ'
+  };
+  public KontoEmployeesColumn: ColumnRef = {
+    displayedName: 'ChartOfAccountsEmployees',
+    name: 'charts-of-accounts-employees'
+  };
+  public KontoUserIDColumn: ColumnRef = {
+    displayedName: 'UserID',
+    name: 'user-id'
+  };
+  public KontoSysDateTimeColumn: ColumnRef = {
+    displayedName: 'SysDateTime',
+    name: 'sys-datetime'
+  };
+
+  public KontoDisplayedColumns: ColumnRef[] = [
+    this.KontoSifColumn,
+    this.KontoNameColumn,
+    this.KontoAccountBalancesColumn,
+    this.KontoBalanceIndicatorColumn,
+    this.KontoForeignExchangeIndicatorColumn,
+    this.KontoIncomeOrExpenditureIndicatorColumn,
+    this.KontoIndicatorOJColumn,
+    this.KontoEmployeesColumn,
+  ];
+  public KontoColumnsList: ColumnRef[] = [
+    this.RNColumn,
+    this.KontoSifColumn,
+    this.KontoNameColumn,
+    this.KontoAccountBalancesColumn,
+    this.KontoBalanceIndicatorColumn,
+    this.KontoForeignExchangeIndicatorColumn,
+    this.KontoIncomeOrExpenditureIndicatorColumn,
+    this.KontoIndicatorOJColumn,
+    this.KontoEmployeesColumn,
+    this.KontoUserIDColumn,
+    this.KontoSysDateTimeColumn
+  ];
+
+  public NAZIVTVRTKEColumn: ColumnRef = {
+    displayedName: 'NAZIVTVRTKE',
+    name: 'NAZIVTVRTKE'
+  };
+
+  public ADRESATVRTKEColumn: ColumnRef = {
+    displayedName: 'ADRESATVRTKE',
+    name: 'ADRESATVRTKE'
+  };
+
+  public BAZAERPColumn: ColumnRef = {
+    displayedName: 'BAZAERP',
+    name: 'BAZAERP'
+  };
+
+  public BAZALOCALColumn: ColumnRef = {
+    displayedName: 'BAZALOCAL',
+    name: 'BAZALOCAL'
+  };
+
+  public CONNSTRINGERPColumn: ColumnRef = {
+    displayedName: 'CONNSTRINGERP',
+    name: 'CONNSTRINGERP'
+  };
+
+  public CONNSTRINGLOCALColumn: ColumnRef = {
+    displayedName: 'CONNSTRINGLOCAL',
+    name: 'CONNSTRINGLOCAL'
+  };
+
+  public BROJNEPLACENIHRACUNAColumn: ColumnRef = {
+    displayedName: 'BROJNEPLACENIHRACUNA',
+    name: 'BROJNEPLACENIHRACUNA'
+  };
+
+  public OIBTVRTKEColumn: ColumnRef = {
+    displayedName: 'OIBTVRTKE',
+    name: 'OIBTVRTKE'
+  };
+
+  public MATICNIBROJTVRTKEColumn: ColumnRef = {
+    displayedName: 'MATICNIBROJTVRTKE',
+    name: 'MATICNIBROJTVRTKE'
+  };
+  
+  public NAZIVTVRTKEOVRSITELJAColumn: ColumnRef = {
+    displayedName: 'NAZIVTVRTKEOVRSITELJA',
+    name: 'NAZIVTVRTKEOVRSITELJA'
+  };
+
+  public ADRESATVRTKEOVRSITELJAColumn: ColumnRef = {
+    displayedName: 'ADRESATVRTKEOVRSITELJA',
+    name: 'ADRESATVRTKEOVRSITELJA'
+  };
+
+  public IBANTVRTKEOVRSITELJAColumn: ColumnRef = {
+    displayedName: 'IBANTVRTKEOVRSITELJA',
+    name: 'IBANTVRTKEOVRSITELJA'
+  };
+
+  public KONTOUPLATEColumn: ColumnRef = {
+    displayedName: 'KONTOUPLATE',
+    name: 'KONTOUPLATE'
+  };
+
+  public PNBPREFIXPRAVNEOSOBEColumn: ColumnRef = {
+    displayedName: 'PNBPREFIXPRAVNEOSOBE',
+    name: 'PNBPREFIXPRAVNEOSOBE'
+  };
+
+  public PNBPREFIXFIZICKEOSOBEColumn: ColumnRef = {
+    displayedName: 'PNBPREFIXFIZICKEOSOBE',
+    name: 'PNBPREFIXFIZICKEOSOBE'
+  };
+
+  public IBANKARTICAColumn: ColumnRef = {
+    displayedName: 'IBANKARTICA',
+    name: 'IBANKARTICA'
+  };
+
+  public TvrtkeDisplayedColumns: ColumnRef[] = [
+    this.IDTVRTKEColumn,
+    this.NAZIVTVRTKEColumn,
+    this.ADRESATVRTKEColumn,
+    this.AKTIVNOSTColumn,
+    this.BAZAERPColumn,
+    this.BAZALOCALColumn,
+    this.CONNSTRINGERPColumn,
+    this.CONNSTRINGLOCALColumn,
+    this.BROJNEPLACENIHRACUNAColumn,
+  ];
+  public TvrtkeColumnsList: ColumnRef[] = [
+    this.RNColumn,
+    this.IDTVRTKEColumn,
+    this.NAZIVTVRTKEColumn,
+    this.ADRESATVRTKEColumn,
+    this.AKTIVNOSTColumn,
+    this.BAZAERPColumn,
+    this.BAZALOCALColumn,
+    this.CONNSTRINGERPColumn,
+    this.CONNSTRINGLOCALColumn,
+    this.BROJNEPLACENIHRACUNAColumn,
+    this.OIBTVRTKEColumn,
+    this.MATICNIBROJTVRTKEColumn,
+    this.NAZIVTVRTKEOVRSITELJAColumn,
+    this.ADRESATVRTKEOVRSITELJAColumn,
+    this.IBANTVRTKEOVRSITELJAColumn,
+    this.KONTOUPLATEColumn,
+    this.PNBPREFIXPRAVNEOSOBEColumn,
+    this.PNBPREFIXFIZICKEOSOBEColumn,
+    this.IBANKARTICAColumn,
+    this.IDKORISNIKAColumn,
+    this.SYSDATETIMEColumn,
+  ];
+
   public sidebarItems: SidebarItem[] = [
     {
       namePrefix: '',
@@ -372,6 +659,25 @@ export class GlobalVariablesService {
           name: 'PredlosciObavijesti',
           icon: 'feed',
           url: '/predlosci-obavijesti',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
+      ]
+    },
+    {
+      namePrefix: '',
+      name: 'Administration',
+      icon: '',
+      highlighted: false,
+      rightsState: 1,
+      open: false,
+      children: [
+        {
+          namePrefix: '',
+          name: 'Tvrtke',
+          icon: 'house',
+          url: '/tvrtke',
           highlighted: false,
           rightsState: 1,
           open: false

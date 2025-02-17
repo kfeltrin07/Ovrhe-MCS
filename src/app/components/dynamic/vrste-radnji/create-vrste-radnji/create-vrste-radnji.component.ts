@@ -1,11 +1,14 @@
+import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { CRUDAction, VrsteRadnji } from 'src/app/models/models.service';
 import { TranslationPipe } from 'src/app/pipes/translation/translation.pipe';
@@ -13,8 +16,6 @@ import { GlobalFunctionsService } from 'src/app/services/global-functions/global
 import { GlobalVariablesService } from 'src/app/services/global-variables/global-variables.service';
 import { SessionService } from 'src/app/services/session/session.service';
 import { TranslationService } from 'src/app/services/translation/translation.service';
-import { MatAutocompleteModule } from '@angular/material/autocomplete';
-import { MatRadioModule } from '@angular/material/radio';
 
 @Component({
   selector: 'app-create-vrste-radnji',
@@ -30,7 +31,9 @@ import { MatRadioModule } from '@angular/material/radio';
 
     TranslationPipe,
     CommonModule,
-    FormsModule
+    FormsModule,
+    CdkDrag,
+    CdkDragHandle
   ],
   templateUrl: './create-vrste-radnji.component.html',
   styleUrl: './create-vrste-radnji.component.scss'

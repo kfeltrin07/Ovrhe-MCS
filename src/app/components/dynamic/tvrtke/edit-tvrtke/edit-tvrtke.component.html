@@ -1,0 +1,247 @@
+<div class="colored-header text-align-center" cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle
+    cdkDragBoundary=".cdk-overlay-container">
+    {{ 'Editing' | translate }}
+    <mat-icon class="dialog-close-button" mat-dialog-close>close</mat-icon>
+
+</div>
+
+<mat-dialog-content class="small-margin-and-center-title">
+
+    <h2 mat-dialog-title class="text-align-center">
+        <mat-icon class="dialog-title-icon">person</mat-icon>
+        <mat-icon class="dialog-title-icon">add</mat-icon>
+        <span class="dialog-title">{{ 'TvrtkeEditing' | translate }}</span>
+    </h2>
+
+
+    <div class="form-container">
+        <table>
+            <tr>
+                <td>
+                    <label for="IDTVRTKE" class="minimum-margin-top">{{ 'Code' | translate }}:</label>
+                </td>
+                <td></td>
+
+                <td>
+                    <input id="IDTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.IDTVRTKE"
+                        [class.input-color-valid]="tvrtke!.IDTVRTKE" disabled
+                        [class.red-input]="!globalFn.checkValidity(tvrtke!.IDTVRTKE)"
+                        placeholder="{{ 'Code' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="NAZIVTVRTKE" class="minimum-margin-top">{{ 'Name' | translate }}:</label>
+                </td>
+                <td></td>
+
+                <td>
+                    <input id="NAZIVTVRTKE" class="minimum-margin width-276-px"
+                        [(ngModel)]="tvrtke!.NAZIVTVRTKE" [class.input-color-valid]="tvrtke!.NAZIVTVRTKE"
+                        [class.red-input]="!globalFn.checkValidity(tvrtke!.NAZIVTVRTKE)"
+                        placeholder="{{ 'Name' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ADRESATVRTKE" class="minimum-margin-top">{{ 'ADRESATVRTKE' | translate }}:</label>
+                </td>
+                <td></td>
+
+                <td>
+                    <input id="ADRESATVRTKE" class="minimum-margin width-276-px"
+                        [(ngModel)]="tvrtke!.ADRESATVRTKE" placeholder="{{ 'ADRESATVRTKE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="AKTIVNOST" class="minimum-margin-top">{{ 'AKTIVNOST' | translate }}:</label>
+                </td>
+                <td></td>
+
+                <td>
+                    <input id="AKTIVNOST" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.AKTIVNOST"
+                        placeholder="{{ 'AKTIVNOST' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="BAZAERP" class="minimum-margin-top">{{ 'BAZAERP' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="BAZAERP" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.BAZAERP"
+                        placeholder="{{ 'BAZAERP' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="BAZALOCAL" class="minimum-margin-top">{{ 'BAZALOCAL' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="BAZALOCAL" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.BAZALOCAL"
+                        placeholder="{{ 'BAZALOCAL' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="CONNSTRINGERP" class="minimum-margin-top">{{ 'CONNSTRINGERP' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="CONNSTRINGERP" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.CONNSTRINGERP"
+                        placeholder="{{ 'CONNSTRINGERP' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="CONNSTRINGLOCAL" class="minimum-margin-top">{{ 'CONNSTRINGLOCAL' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="CONNSTRINGLOCAL" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.CONNSTRINGLOCAL"
+                        placeholder="{{ 'CONNSTRINGLOCAL' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="BROJNEPLACENIHRACUNA" class="minimum-margin-top">{{ 'BROJNEPLACENIHRACUNA' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="BROJNEPLACENIHRACUNA" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.BROJNEPLACENIHRACUNA"
+                        placeholder="{{ 'BROJNEPLACENIHRACUNA' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="OIBTVRTKE" class="minimum-margin-top">{{ 'OIBTVRTKE' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="OIBTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.OIBTVRTKE"
+                        placeholder="{{ 'OIBTVRTKE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="MATICNIBROJTVRTKE" class="minimum-margin-top">{{ 'MATICNIBROJTVRTKE' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="MATICNIBROJTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.MATICNIBROJTVRTKE"
+                        placeholder="{{ 'MATICNIBROJTVRTKE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="NAZIVTVRTKEOVRSITELJA" class="minimum-margin-top">{{ 'NAZIVTVRTKEOVRSITELJA' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="NAZIVTVRTKEOVRSITELJA" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.NAZIVTVRTKEOVRSITELJA"
+                        placeholder="{{ 'NAZIVTVRTKEOVRSITELJA' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="ADRESATVRTKEOVRSITELJA" class="minimum-margin-top">{{ 'ADRESATVRTKEOVRSITELJA' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="ADRESATVRTKEOVRSITELJA" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.ADRESATVRTKEOVRSITELJA"
+                        placeholder="{{ 'ADRESATVRTKEOVRSITELJA' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="IBANTVRTKEOVRSITELJA" class="minimum-margin-top">{{ 'IBANTVRTKEOVRSITELJA' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="IBANTVRTKEOVRSITELJA" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.IBANTVRTKEOVRSITELJA"
+                        placeholder="{{ 'IBANTVRTKEOVRSITELJA' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="KONTO" class="minimum-margin-top">{{ 'KONTO' | translate }}:</label>
+                </td>
+                <td>
+                    <mat-icon matSuffix class="minimum-margin-left cursor-pointer display-flex" (click)="pickKonto();"
+                        (contextmenu)="removeKonto($event)"
+                        matTooltip="{{ (!tvrtke.KONTOUPLATE ? 'ClickToSelectFromDialogToFill' : '') | translate }}"
+                        [class.color-valid]="varNames.NAZKONTOUPLATE">
+                        {{ varNames!.NAZKONTOUPLATE ? 'done' : 'import_contacts'}}
+                    </mat-icon>
+                </td>
+                <td class="resultTD">
+                    <span (click)="refreshKonto(tvrtke!.KONTOUPLATE, false);">
+                        <input [class.red-input]="!globalFn.checkValidity(tvrtke!.KONTOUPLATE)" type="text"
+                            [(ngModel)]="tvrtke!.KONTOUPLATE" maxlength="22"
+                            class="minimum-margin-horizontal light-gray-background" style="width: 50px;"
+                            placeholder="{{ 'Code' | translate }}" id="offeredKonto-help-span"
+                            (blur)="OfferedKonto();resetKontoIndex();" (ngModelChange)="filterKonto(tvrtke!.KONTOUPLATE);"
+                            (focus)="refreshKonto(tvrtke!.KONTOUPLATE, false);"
+                            (keyup.enter)="selectKonto(offeredKonto[KontoDropdownIndex]);"
+                            (keyup.escape)="resetKontoIndex();"
+                            (keyup.arrowdown)="KontoDropdownIndex = (KontoDropdownIndex + 1) % offeredKonto.length;globalFn.scroll('offeredKonto-dropdown-'+KontoDropdownIndex);"
+                            (keyup.arrowup)="KontoDropdownIndex = (KontoDropdownIndex - 1 + offeredKonto.length) % offeredKonto.length;globalFn.scroll('offeredKonto-dropdown-'+KontoDropdownIndex);">
+                        <div id="offeredKonto-dropdown" class="select-dropdown-content max-height-300px"
+                            style="z-index: 500;">
+                            <div [id]="'offeredKonto-dropdown-' + i" *ngFor="let konto of offeredKonto; index as i"
+                                matRipple class="dropdown-content-item display-flex align-items-center space-between"
+                                [class.gray-background]="i == KontoDropdownIndex" (mousedown)="selectKonto(konto);">
+                                <span>
+                                    <b>{{ konto.SIFKONTO }}</b> ({{ konto.NAZKONTO }})
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="small-margin-left margin-right" matTooltip="{{ varNames!.NAZKONTOUPLATE}}"
+                        matTooltipShowDelay="1000">{{
+                        varNames!.NAZKONTOUPLATE}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="PNBPREFIXPRAVNEOSOBE" class="minimum-margin-top">{{ 'PNBPREFIXPRAVNEOSOBE' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="PNBPREFIXPRAVNEOSOBE" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.PNBPREFIXPRAVNEOSOBE"
+                        placeholder="{{ 'PNBPREFIXPRAVNEOSOBE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="PNBPREFIXFIZICKEOSOBE" class="minimum-margin-top">{{ 'PNBPREFIXFIZICKEOSOBE' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="PNBPREFIXFIZICKEOSOBE" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.PNBPREFIXFIZICKEOSOBE"
+                        placeholder="{{ 'PNBPREFIXFIZICKEOSOBE' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="IBANKARTICA" class="minimum-margin-top">{{ 'IBANKARTICA' | translate }}:</label>
+                </td>
+                <td></td>
+
+                <td>
+                    <input id="IBANKARTICA" class="minimum-margin width-276-px"
+                        [(ngModel)]="tvrtke!.IBANKARTICA" placeholder="{{ 'IBANKARTICA' | translate }}">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true">{{ 'Cancel' | translate }}</button>
+    <button mat-raised-button type="button" color="primary" [mat-dialog-close]="true" (click)="save();"
+        [disabled]="validateForm(tvrtke!)">{{ 'Create' | translate }}</button>
+</mat-dialog-actions>

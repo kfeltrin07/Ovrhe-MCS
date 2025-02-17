@@ -1,5 +1,7 @@
-<div class="colored-header text-align-center">
+<div class="colored-header text-align-center" cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle cdkDragBoundary=".cdk-overlay-container">
     {{ 'Editing' | translate }}
+    <mat-icon class="dialog-close-button" mat-dialog-close >close</mat-icon>
+
 </div>
 
 <mat-dialog-content class="small-margin-and-center-title">
@@ -21,7 +23,7 @@
                     <input id="IDVRSTARADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.IDVRSTARADNJE"
                         [class.input-color-valid]="vrsteRadnji!.IDVRSTARADNJE"
                         [class.red-input]="!globalFn.checkValidity(vrsteRadnji!.IDVRSTARADNJE)"
-                        placeholder="{{ 'IDVRSTARADNJE' | translate }}">
+                        placeholder="{{ 'Code' | translate }}">
                 </td>
             </tr>
             <tr>
@@ -32,7 +34,7 @@
                     <input id="NAZIVVRSTERADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.NAZIVVRSTERADNJE"
                         [class.input-color-valid]="vrsteRadnji!.NAZIVVRSTERADNJE"
                         [class.red-input]="!globalFn.checkValidity(vrsteRadnji!.NAZIVVRSTERADNJE)"
-                        placeholder="{{ 'NAZIVVRSTERADNJE' | translate }}">
+                        placeholder="{{ 'Name' | translate }}">
                 </td>
             </tr>
             <tr>

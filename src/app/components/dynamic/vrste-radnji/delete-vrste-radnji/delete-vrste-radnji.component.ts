@@ -1,9 +1,10 @@
+import { CdkDrag, CdkDragHandle } from '@angular/cdk/drag-drop';
 import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, Inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
-import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { CRUDAction, VrsteRadnji } from 'src/app/models/models.service';
 import { TranslationPipe } from 'src/app/pipes/translation/translation.pipe';
@@ -22,7 +23,9 @@ import { TranslationService } from 'src/app/services/translation/translation.ser
 
     TranslationPipe,
     CommonModule,
-    FormsModule
+    FormsModule,
+    CdkDrag,
+    CdkDragHandle
   ],
   templateUrl: './delete-vrste-radnji.component.html',
   styleUrl: './delete-vrste-radnji.component.scss'

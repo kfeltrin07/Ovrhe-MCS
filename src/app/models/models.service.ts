@@ -26,20 +26,103 @@ export enum RightsState {
 
 // START: MODELS
 export interface VrsteRadnji {
-  UKUPANBROJSLOGOVA: number,
-  RN: number,
-  SIFVLAS: string,
-  IDVRSTARADNJE: string,
-  NAZIVVRSTERADNJE: string,
-  OPISVRSTERADNJE: string,
-  SISTEMSKAVRSTA: string,
-  IDTVRTKE: string,
-  AKTIVNOST: string,
-  IDKORISNIKA: string,
-  SYSDATETIME: string
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFVLAS: string;
+  IDVRSTARADNJE: string;
+  NAZIVVRSTERADNJE: string;
+  OPISVRSTERADNJE: string;
+  SISTEMSKAVRSTA: string;
+  IDTVRTKE: string;
+  AKTIVNOST: string;
+  IDKORISNIKA: string;
+  SYSDATETIME: string;
+}
+
+export interface StatusiRadnji {
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFVLAS: string;
+  IDSTATUSARADNJE: string;
+  NAZIVSTATUSA: string;
+  JEZAPOCETO: string;
+  JEZAVRSENO: string;
+  SISTEMSKISTATUS: string;
+  IDTVRTKE: string;
+  AKTIVNOST: string;
+  IDKORISNIKA: string;
+  SYSDATETIME: string;
+}
+
+export interface TipOvrhe {
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFVLAS: string;
+  IDTIPOVRHE: string;
+  NAZIVTIPAOVRHE: string;
+  OZNAKATIPAOVRHE: string;
+  IDTVRTKE: string;
+  PREFIXPNB: string;
+  KONTO: string;
+  PROTUKONTO: string;
+  TIPDOKUMENTAERP: string;
+  IDKORISNIKA: string;
+  SYSDATETIME: string;
+}
+
+export interface ChartOfAccounts { // KONTO
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFKONTO: string;
+  NAZKONTO: string;
+  INDSC: string;
+  INDBIL: string;
+  INDDEVIZNI: string;
+  INDPRIHILIRAS: string;
+  INDZAP: string;
+  INDOJ: string;
+  SIFKONTO2: string;
+  NAZKONTO2: string;
+  INDUFINSUM: string;
+  PLAN_DATUM: string;
+  PLAN_IZNOS: string;
+  IZMJENA1_DATUM: string;
+  IZMJENA1_IZNOS: string;
+  IZMJENA2_DATUM: string;
+  IZMJENA2_IZNOS: string;
+  SYSDATETIME: string;
+  IDKORISNIKA: string;
+}
+
+export interface Tvrtke {
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFVLAS: string;
+  IDTVRTKE: string;
+  NAZIVTVRTKE: string;
+  ADRESATVRTKE: string;
+  AKTIVNOST: string;
+  BAZAERP: string;
+  BAZALOCAL: string;
+  CONNSTRINGERP: string;
+  CONNSTRINGLOCAL: string;
+  BROJNEPLACENIHRACUNA: string;
+  OIBTVRTKE: string;
+  MATICNIBROJTVRTKE: string;
+  PREDLOZAKOVRHE:string;
+  NAZIVTVRTKEOVRSITELJA: string;
+  ADRESATVRTKEOVRSITELJA: string;
+  IBANTVRTKEOVRSITELJA: string;
+  KONTOUPLATE: string;
+  PNBPREFIXPRAVNEOSOBE: string;
+  PNBPREFIXFIZICKEOSOBE: string;
+  IBANKARTICA: string;
+  IDKORISNIKA: string;
+  SYSDATETIME: string;
 }
 
 // END: MODELS
+
 // START: session user
 export interface SessionUser {
   ID?: number;
