@@ -107,9 +107,6 @@ export class EditKamatneStopeComponent {
   }
 
   public ngOnInit(): void { 
-
-
-    this.OfferedTvrtke();
   }
 
   public validateForm(kamatneStope: KamatneStope): boolean {

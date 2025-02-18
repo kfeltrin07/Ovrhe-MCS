@@ -103,7 +103,6 @@ export class EditStatusiRadnjiComponent implements OnInit {
 
   public ngOnInit(): void {
     this.statusiRadnji = this.receivedStatusiRadnji;
-    this.OfferedTvrtke();
   }
 
   public validateForm(statusiRadnji: StatusiRadnji): boolean {

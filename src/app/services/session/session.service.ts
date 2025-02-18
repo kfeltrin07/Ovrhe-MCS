@@ -94,6 +94,7 @@ export class SessionService {
         this.cookies.setCookie('logged-in-user-username', userLogin.pUsername ? userLogin.pUsername : "");
         this.cookies.setCookie('logged-in-user-session-id', this.loggedInUser.sessionID);
         this.cookies.setCookie('logged-in-user-owner', userLogin.pOwner ? userLogin.pOwner : "");
+        this.getTvrtkaInfo(response.debugData.sessionInfo.sid);
 
         //this.router.navigate(['/dashboard']);
         this.router.navigate(['/selection-screen']);
@@ -140,6 +141,7 @@ export class SessionService {
         ULOGA_NAZIV: ""
       };
       this.cookies.deleteCookie('logged-in-user-session-id');
+      this.cookies.deleteCookie('IDTVRTKE');
       this.loggingOutDialogRef.close();
       this.router.navigate(['/login']);
     });
@@ -232,4 +234,21 @@ export class SessionService {
     });
   }
 
+  public getTvrtkaInfo(SID:any): void {
+    this.http.post(
+      this.globalVar.APIHost + this.globalVar.APIFile,
+      {
+        action: 'OracleSession',
+        method: 'getTvrtkaInfo',
+        sid: SID,
+        data: {
+          pSid: SID,
+        }
+      }
+    ).subscribe((response: any) => {
+      this.globalVar.IdTvrtke= response.debugData.data['0'].IDTVRTKE;
+      this.cookies.setCookie('IDTVRTKE', this.globalVar.IdTvrtke);
+
+    });
+  }
 }

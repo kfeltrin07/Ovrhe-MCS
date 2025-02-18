@@ -65,32 +65,9 @@
                         {{ varNames!.NAZIVTVRTKE ? 'done' : 'import_contacts'}}
                     </mat-icon>
                 </td>
-                <td class="resultTD">
-                    <span (click)="refreshTvrtke(tipOvrhe!.IDTVRTKE, false);">
-                        <input [class.red-input]="!globalFn.checkValidity(tipOvrhe!.IDTVRTKE)" type="text"
-                            [(ngModel)]="tipOvrhe!.IDTVRTKE" maxlength="22"
-                            class="minimum-margin-horizontal light-gray-background" style="width: 50px;"
-                            placeholder="{{ 'Code' | translate }}" id="offeredTvrtke-help-span"
-                            (blur)="OfferedTvrtke();resetTvrtkeIndex();" (ngModelChange)="filterTvrtke(tipOvrhe!.IDTVRTKE);"
-                            (focus)="refreshTvrtke(tipOvrhe!.IDTVRTKE, false);"
-                            (keyup.enter)="selectTvrtke(offeredTvrtke[TvrtkeDropdownIndex]);"
-                            (keyup.escape)="resetTvrtkeIndex();"
-                            (keyup.arrowdown)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex + 1) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);"
-                            (keyup.arrowup)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex - 1 + offeredTvrtke.length) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);">
-                        <div id="offeredTvrtke-dropdown" class="select-dropdown-content max-height-300px"
-                            style="z-index: 500;">
-                            <div [id]="'offeredTvrtke-dropdown-' + i" *ngFor="let konto of offeredTvrtke; index as i"
-                                matRipple class="dropdown-content-item display-flex align-items-center space-between"
-                                [class.gray-background]="i == TvrtkeDropdownIndex" (mousedown)="selectTvrtke(konto);">
-                                <span>
-                                    <b>{{ konto.IDTVRTKE }}</b> ({{ konto.NAZIVTVRTKE }})
-                                </span>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="small-margin-left margin-right" matTooltip="{{ varNames!.NAZIVTVRTKE }}"
-                        matTooltipShowDelay="1000">{{
-                        varNames!.NAZIVTVRTKE }}</span>
+                <td>
+                    <input id="IDTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="globalVar.IdTvrtke"
+                        disabled placeholder="{{ 'IDTVRTKE' | translate }}">
                 </td>
             </tr>
             <tr>

@@ -19,7 +19,6 @@
                 <td>
                     <label for="IDSTATUSA" class="minimum-margin-top">{{ 'Code' | translate }}:</label>
                 </td>
-                <td></td>
                 <td>
                     <input id="IDSTATUSA" class="minimum-margin width-276-px" [(ngModel)]="statusi!.IDSTATUSA"
                         [class.input-color-valid]="statusi!.IDSTATUSA"
@@ -31,7 +30,6 @@
                 <td>
                     <label for="NAZIVSTATUSA" class="minimum-margin-top">{{ 'Name' | translate }}:</label>
                 </td>
-                <td></td>
                 <td>
                     <input id="NAZIVSTATUSA" class="minimum-margin width-276-px" [(ngModel)]="statusi!.NAZIVSTATUSA"
                         [class.input-color-valid]="statusi!.NAZIVSTATUSA"
@@ -43,7 +41,6 @@
                 <td>
                     <label for="JEZATVORENO" class="minimum-margin-top">{{ 'JEZATVORENO' | translate }}:</label>
                 </td>
-                <td></td>
                 <td>
                     <mat-radio-group id="JEZATVORENO" [(ngModel)]="statusi!.JEZATVORENO">
                         <mat-radio-button [value]="'0'">{{'No'|translate}}</mat-radio-button>
@@ -56,46 +53,14 @@
                     <label for="IDTVRTKE" class="minimum-margin-top">{{ 'IDTVRTKE' | translate }}:</label>
                 </td>
                 <td>
-                    <mat-icon matSuffix class="minimum-margin-left cursor-pointer display-flex" (click)="pickTvrtke();"
-                        (contextmenu)="removeTvrtke($event)"
-                        matTooltip="{{ (!statusi.IDTVRTKE ? 'ClickToSelectFromDialogToFill' : '') | translate }}"
-                        [class.color-valid]="varNames.NAZIVTVRTKE">
-                        {{ varNames!.NAZIVTVRTKE ? 'done' : 'import_contacts'}}
-                    </mat-icon>
-                </td>
-                <td class="resultTD">
-                    <span (click)="refreshTvrtke(statusi!.IDTVRTKE, false);">
-                        <input [class.red-input]="!globalFn.checkValidity(statusi!.IDTVRTKE)" type="text"
-                            [(ngModel)]="statusi!.IDTVRTKE" maxlength="22"
-                            class="minimum-margin-horizontal light-gray-background" style="width: 50px;"
-                            placeholder="{{ 'Code' | translate }}" id="offeredTvrtke-help-span"
-                            (blur)="OfferedTvrtke();resetTvrtkeIndex();" (ngModelChange)="filterTvrtke(statusi!.IDTVRTKE);"
-                            (focus)="refreshTvrtke(statusi!.IDTVRTKE, false);"
-                            (keyup.enter)="selectTvrtke(offeredTvrtke[TvrtkeDropdownIndex]);"
-                            (keyup.escape)="resetTvrtkeIndex();"
-                            (keyup.arrowdown)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex + 1) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);"
-                            (keyup.arrowup)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex - 1 + offeredTvrtke.length) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);">
-                        <div id="offeredTvrtke-dropdown" class="select-dropdown-content max-height-300px"
-                            style="z-index: 500;">
-                            <div [id]="'offeredTvrtke-dropdown-' + i" *ngFor="let konto of offeredTvrtke; index as i"
-                                matRipple class="dropdown-content-item display-flex align-items-center space-between"
-                                [class.gray-background]="i == TvrtkeDropdownIndex" (mousedown)="selectTvrtke(konto);">
-                                <span>
-                                    <b>{{ konto.IDTVRTKE }}</b> ({{ konto.NAZIVTVRTKE }})
-                                </span>
-                            </div>
-                        </div>
-                    </span>
-                    <span class="small-margin-left margin-right" matTooltip="{{ varNames!.NAZIVTVRTKE }}"
-                        matTooltipShowDelay="1000">{{
-                        varNames!.NAZIVTVRTKE }}</span>
+                    <input id="IDTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="globalVar.IdTvrtke"
+                        disabled placeholder="{{ 'IDTVRTKE' | translate }}">
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="AKTIVNOST" class="minimum-margin-top">{{ 'AKTIVNOST' | translate }}:</label>
                 </td>
-                <td></td>
                 <td>
                     <mat-radio-group id="AKTIVNOST" [(ngModel)]="statusi!.AKTIVNOST">
                         <mat-radio-button [value]="'0'">{{'No'|translate}}</mat-radio-button>

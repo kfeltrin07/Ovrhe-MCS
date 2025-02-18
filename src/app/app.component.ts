@@ -67,6 +67,7 @@ export class AppComponent {
     this.session.loggedInUser.ownerID = this.cookies.getCookie('logged-in-user-owner-id');
     this.session.loggedInUser.ULOGA = this.cookies.getCookie('ULOGA');
     this.session.loggedInUser.ULOGA_NAZIV = this.cookies.getCookie('ULOGA_NAZIV');
+    this.globalVar.IdTvrtke = this.cookies.getCookie('IDTVRTKE');
 
     if (this.cookies.getCookie('selected-language') != '') {
       this.globalVar.selectedLanguage = this.cookies.getCookie('selected-language') as Language;

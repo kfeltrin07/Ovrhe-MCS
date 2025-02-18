@@ -33,6 +33,8 @@ export class GlobalVariablesService {
   public headerTitle: string = '';
   public headerImage: string = '';
 
+  public IdTvrtke:string = '';
+
   public sideNav!: MatSidenav;
 
   public env = environment.name;

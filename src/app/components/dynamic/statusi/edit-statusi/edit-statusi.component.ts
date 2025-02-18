@@ -100,7 +100,6 @@ public varNames: any = {
 
   public ngOnInit(): void {
     this.statusi = this.receivedStatusi;
-    this.OfferedTvrtke();
    }
 
   public validateForm(statusi: Statusi): boolean {

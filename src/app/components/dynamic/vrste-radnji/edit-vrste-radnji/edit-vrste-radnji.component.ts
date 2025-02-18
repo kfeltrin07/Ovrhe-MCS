@@ -102,7 +102,6 @@ export class EditVrsteRadnjiComponent implements OnInit {
 
   public ngOnInit(): void {
     this.vrsteRadnji = this.receivedVrsteRadnji;
-    this.OfferedTvrtke();
   }
 
   public validateForm(vrsteRadnji: VrsteRadnji): boolean {
