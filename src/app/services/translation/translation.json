@@ -8397,6 +8397,84 @@
             "en": "Editing companies",
             "hr": "Uređivanje tvrtke",
             "transferred": false
+        },
+        {
+            "ref": "TipOvrheEditing",
+            "en": "Editing enforcement type",
+            "hr": "Uređivanje tipa ovrhe",
+            "transferred": false
+        },
+        {
+            "ref": "TipOvrheCreation",
+            "en": "Creating enforcement type",
+            "hr": "Kreiranje tipa ovrhe",
+            "transferred": false
+        },
+        {
+            "ref": "StatusiRadnjiCreation",
+            "en": "Creating action status",
+            "hr": "Kreiranje statusa radnji",
+            "transferred": false
+        },
+        {
+            "ref": "StatusiRadnjiEditing",
+            "en": "Editing action status",
+            "hr": "Uređivanje statusa radnji",
+            "transferred": false
+        },
+        {
+            "ref": "Statusi",
+            "en": "Statuses",
+            "hr": "Statusi",
+            "transferred": false
+        },
+        {
+            "ref": "IDSTATUSA",
+            "en": "Status ID",
+            "hr": "ID statusa",
+            "transferred": false
+        },
+        {
+            "ref": "JEZATVORENO",
+            "en": "Is closed",
+            "hr": "Je zatvoreno",
+            "transferred": false
+        },
+        {
+            "ref": "KamatneStope",
+            "en": "Interest rates",
+            "hr": "Kamatne stope",
+            "transferred": false
+        },
+        {
+            "ref": "POSTOTAKKAMATA",
+            "en": "Interest rate",
+            "hr": "Postotak kamata",
+            "transferred": false
+        },
+        {
+            "ref": "KamatneStopeCreation",
+            "en": "Creating interest rates",
+            "hr": "Kreiranje kamatne stope",
+            "transferred": false
+        },
+        {
+            "ref": "KamatneStopeEditing",
+            "en": "Editing interest rates",
+            "hr": "Uređivanje kamatne stope",
+            "transferred": false
+        },
+        {
+            "ref": "IDKAMATNESTOPE",
+            "en": "Interest rate ID",
+            "hr": "ID kamatne stope",
+            "transferred": false
+        },
+        {
+            "ref": "IDTIPKAMATNESTOPE",
+            "en": "Interest rate type ID",
+            "hr": "ID tipa kamatne stope",
+            "transferred": false
         }
     ]
 }

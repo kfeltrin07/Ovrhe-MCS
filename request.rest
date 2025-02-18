@@ -322,3 +322,147 @@ Content-Type: application/json
     "pIdTvrtke": "77"
   }
 }
+
+
+
+
+// GET OVR_Statusi
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action": "Ovrhe",
+  "method": "getOVR_Statusi",
+  "sid": "uuh2orotl28par5o0bf4g46597",
+  "data": {
+    "pDioNaziva": "",
+    "limit": 10,
+    "page": 1,
+    "sort": [
+      {
+        "property": "IDSTATUSA",
+        "direction": "ASC"
+      }
+    ]
+  }
+}
+
+// INSERT OVR_Statusi
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_Statusi",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data" : {
+    "pAkcija": 1,
+    "pIdStatusa": "77",
+    "pIdTvrtke": "1",
+    "pNazivStatusa": "Test status",
+    "pJeZatvoreno": "0",
+    "pAktivnost": "0"
+  }
+}
+// UPDATE OVR_Statusi
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_Statusi",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data" : {
+    "pAkcija": 2,
+    "pIdStatusa": "77",
+    "pIdTvrtke": "2",
+    "pNazivStatusa": "Test status UPD",
+    "pJeZatvoreno": "1",
+    "pAktivnost": "1"
+  }
+}
+// DELETE OVR_Statusi
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_Statusi",
+  "sid": "sisv8dmgv1bmlckqfbbe3gm2q6",
+  "data" : {
+    "pAkcija": 0,
+    "pIdStatusa": "77"
+  }
+}
+// GET OVR_KamatneStope
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+
+{
+  "action": "Ovrhe",
+  "method": "getOVR_KamatneStope",
+  "sid": "uuh2orotl28par5o0bf4g46597",
+  "data": {
+    "pDioNaziva": "",
+    "limit": 10,
+    "page": 1,
+    "sort": [
+      {
+        "property": "IDKAMATNESTOPE",
+        "direction": "ASC"
+      }
+    ]
+  }
+}
+
+// INSERT OVR_KamatneStope
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_KamatneStope",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 1,
+    "pIdKamatneStope": "333",
+    "pIdTipKamatneStope": "1",
+    "pDatumOd": "12.02.2025",
+    "pDatumDo": "13.02.2025",
+    "pPostotakKamata": "1",
+    "pIdTvrtke": "1"
+  }
+}
+// UPDATE OVR_KamatneStope
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_KamatneStope",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 2,
+    "pIdKamatneStope": "333",
+    "pIdTipKamatneStope": "2",
+    "pDatumOd": "14.02.2025",
+    "pDatumDo": "15.02.2025",
+    "pPostotakKamata": "2",
+    "pIdTvrtke": "2"
+  }
+}
+// DELETE OVR_KamatneStope
+###
+POST http://192.168.88.169:8080/php_angularAPI_oracle_razvoj/router.php
+Content-Type: application/json
+{
+  "action" : "Ovrhe",
+  "method" : "updateOVR_KamatneStope",
+  "sid": "eo1i2hf3o0dpqcemqutbtrv3u1",
+  "data" : {
+    "pAkcija": 0,
+    "pIdKamatneStope": "333"
+  }
+}

@@ -68,7 +68,7 @@ export class LoginComponent implements OnInit {
     pPassword: 'demode94'
   };*/
   public userLogin: UserMetadata = {
-    pOwner: 'čistoća',
+    pOwner: '',
     pUsername: '',
     pPassword: ''
   };
@@ -89,14 +89,24 @@ export class LoginComponent implements OnInit {
     this.getCookies();
     if (this.session.loggedInUser) {
       this.userLogin.pUsername = this.session.loggedInUser.username ? this.session.loggedInUser.username : "";
+      this.userLogin.pOwner = this.session.loggedInUser.owner ? this.session.loggedInUser.owner : "";
     }
+    this.getVlasnika();
+
   }
 
   public toggleObscurity(): void {
+    
     this.obscurePassword = !this.obscurePassword;
   }
 
   public login(): void {
+    if (this.globalVar.env == 'cistoca') {
+      this.userLogin.pOwner = 'čistoća'
+      this.vlasnik.NAZIV_VLASNIKA = 'čistoća';
+    }
+    this.userLogin.pOwner = this.vlasnik.NAZIV_VLASNIKA;
+
     this.session.login(this.userLogin);
   }
 
@@ -146,7 +156,6 @@ export class LoginComponent implements OnInit {
 
   }
 
-  /*
   public getVlasnika(): void {
     this.vlasnici = []
     this.http.post(
@@ -194,5 +203,5 @@ export class LoginComponent implements OnInit {
       }
       
     });
-  }*/
+  }
 }

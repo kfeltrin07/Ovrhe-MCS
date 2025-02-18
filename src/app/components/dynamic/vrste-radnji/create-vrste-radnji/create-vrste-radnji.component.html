@@ -19,6 +19,7 @@
                 <td>
                     <label for="IDVRSTARADNJE" class="minimum-margin-top">{{ 'Code' | translate }}:</label>
                 </td>
+                <td></td>
                 <td>
                     <input id="IDVRSTARADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.IDVRSTARADNJE"
                         [class.input-color-valid]="vrsteRadnji!.IDVRSTARADNJE"
@@ -30,6 +31,8 @@
                 <td>
                     <label for="NAZIVVRSTERADNJE" class="minimum-margin-top">{{ 'Name' | translate }}:</label>
                 </td>
+                <td></td>
+
                 <td>
                     <input id="NAZIVVRSTERADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.NAZIVVRSTERADNJE"
                         [class.input-color-valid]="vrsteRadnji!.NAZIVVRSTERADNJE"
@@ -41,6 +44,7 @@
                 <td>
                     <label for="OPISVRSTERADNJE" class="minimum-margin-top">{{ 'OPISVRSTERADNJE' | translate }}:</label>
                 </td>
+                <td></td>
                 <td>
                     <input id="OPISVRSTERADNJE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.OPISVRSTERADNJE"
                         placeholder="{{ 'OPISVRSTERADNJE' | translate }}">
@@ -50,6 +54,7 @@
                 <td>
                     <label for="SISTEMSKAVRSTA" class="minimum-margin-top">{{ 'SISTEMSKAVRSTA' | translate }}:</label>
                 </td>
+                <td></td>
                 <td>
                     <input id="SISTEMSKAVRSTA" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.SISTEMSKAVRSTA"
                         placeholder="{{ 'SISTEMSKAVRSTA' | translate }}">
@@ -60,17 +65,51 @@
                     <label for="IDTVRTKE" class="minimum-margin-top">{{ 'IDTVRTKE' | translate }}:</label>
                 </td>
                 <td>
-                    <input id="IDTVRTKE" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.IDTVRTKE"
-                        placeholder="{{ 'IDTVRTKE' | translate }}">
+                    <mat-icon matSuffix class="minimum-margin-left cursor-pointer display-flex" (click)="pickTvrtke();"
+                        (contextmenu)="removeTvrtke($event)"
+                        matTooltip="{{ (!vrsteRadnji.IDTVRTKE ? 'ClickToSelectFromDialogToFill' : '') | translate }}"
+                        [class.color-valid]="varNames.NAZIVTVRTKE">
+                        {{ varNames!.NAZIVTVRTKE ? 'done' : 'import_contacts'}}
+                    </mat-icon>
+                </td>
+                <td class="resultTD">
+                    <span (click)="refreshTvrtke(vrsteRadnji!.IDTVRTKE, false);">
+                        <input [class.red-input]="!globalFn.checkValidity(vrsteRadnji!.IDTVRTKE)" type="text"
+                            [(ngModel)]="vrsteRadnji!.IDTVRTKE" maxlength="22"
+                            class="minimum-margin-horizontal light-gray-background" style="width: 50px;"
+                            placeholder="{{ 'Code' | translate }}" id="offeredTvrtke-help-span"
+                            (blur)="OfferedTvrtke();resetTvrtkeIndex();" (ngModelChange)="filterTvrtke(vrsteRadnji!.IDTVRTKE);"
+                            (focus)="refreshTvrtke(vrsteRadnji!.IDTVRTKE, false);"
+                            (keyup.enter)="selectTvrtke(offeredTvrtke[TvrtkeDropdownIndex]);"
+                            (keyup.escape)="resetTvrtkeIndex();"
+                            (keyup.arrowdown)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex + 1) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);"
+                            (keyup.arrowup)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex - 1 + offeredTvrtke.length) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);">
+                        <div id="offeredTvrtke-dropdown" class="select-dropdown-content max-height-300px"
+                            style="z-index: 500;">
+                            <div [id]="'offeredTvrtke-dropdown-' + i" *ngFor="let konto of offeredTvrtke; index as i"
+                                matRipple class="dropdown-content-item display-flex align-items-center space-between"
+                                [class.gray-background]="i == TvrtkeDropdownIndex" (mousedown)="selectTvrtke(konto);">
+                                <span>
+                                    <b>{{ konto.IDTVRTKE }}</b> ({{ konto.NAZIVTVRTKE }})
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="small-margin-left margin-right" matTooltip="{{ varNames!.NAZIVTVRTKE }}"
+                        matTooltipShowDelay="1000">{{
+                        varNames!.NAZIVTVRTKE }}</span>
                 </td>
             </tr>
             <tr>
                 <td>
                     <label for="AKTIVNOST" class="minimum-margin-top">{{ 'AKTIVNOST' | translate }}:</label>
                 </td>
+                <td></td>
                 <td>
-                    <input id="AKTIVNOST" class="minimum-margin width-276-px" [(ngModel)]="vrsteRadnji!.AKTIVNOST"
-                        placeholder="{{ 'AKTIVNOST' | translate }}">
+                    <mat-radio-group id="AKTIVNOST" [(ngModel)]="vrsteRadnji!.AKTIVNOST">
+                        <mat-radio-button [value]="'0'">{{'No'|translate}}</mat-radio-button>
+                        <mat-radio-button [value]="'1'">{{'Yes'|translate}}</mat-radio-button>
+                    </mat-radio-group>
                 </td>
             </tr>
         </table>

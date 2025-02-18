@@ -138,6 +138,7 @@ export class EditTipOvrheComponent implements OnInit {
 
     this.OfferedKonto();
     this.OfferedProtuKonto();
+    this.OfferedTvrtke();
   }
 
   public validateForm(tipOvrhe: TipOvrhe): boolean {

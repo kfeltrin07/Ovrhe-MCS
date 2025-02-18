@@ -38,7 +38,7 @@ import { PaginationComponent } from '../../elements/pagination/pagination.compon
     MatSortModule,
     MatInputModule,
     MatSelectModule,
-    
+
     PaginationComponent,
     TranslationPipe,
     CommonModule,
@@ -50,7 +50,7 @@ import { PaginationComponent } from '../../elements/pagination/pagination.compon
   styleUrl: './pick-tvrtke.component.scss'
 })
 export class PickTvrtkeComponent {
- public displayedColumns: string[] = ['RN', 'IDTVRTKE', 'NAZIVTVRTKE'];
+  public displayedColumns: string[] = ['RN', 'IDTVRTKE', 'NAZIVTVRTKE'];
   public Tvrtke: Tvrtke[] = [];
   public dataSource = this.Tvrtke;
 

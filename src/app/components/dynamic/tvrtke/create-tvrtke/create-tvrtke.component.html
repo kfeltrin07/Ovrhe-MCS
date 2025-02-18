@@ -60,8 +60,10 @@
                 <td></td>
 
                 <td>
-                    <input id="AKTIVNOST" class="minimum-margin width-276-px" [(ngModel)]="tvrtke!.AKTIVNOST"
-                        placeholder="{{ 'AKTIVNOST' | translate }}">
+                    <mat-radio-group id="AKTIVNOST" [(ngModel)]="tvrtke!.AKTIVNOST">
+                        <mat-radio-button [value]="'0'">{{'No'|translate}}</mat-radio-button>
+                        <mat-radio-button [value]="'1'">{{'Yes'|translate}}</mat-radio-button>
+                    </mat-radio-group>
                 </td>
             </tr>
             <tr>

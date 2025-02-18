@@ -50,7 +50,7 @@ export class DeleteTvrtkeComponent {
         sid: this.session.loggedInUser.sessionID,
         data: {
           pAkcija: CRUDAction.Delete,
-          pIdVrstaRadnje: this.tvrtke.IDTVRTKE,
+          pIdTvrtke: this.tvrtke.IDTVRTKE,
         }
       }
     ).subscribe((response: any) => {

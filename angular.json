@@ -4,6 +4,9 @@
   "newProjectRoot": "projects",
   "projects": {
     "ovrhe": {
+      "i18n": {
+        "sourceLocale": "hr"
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -30,6 +33,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -150,6 +154,7 @@
               "src/assets"
             ],
             "styles": [
+              "@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.scss"
             ],
             "scripts": []

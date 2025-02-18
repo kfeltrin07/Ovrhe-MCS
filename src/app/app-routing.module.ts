@@ -15,6 +15,7 @@ import { PredlosciObavijestiComponent } from './components/dynamic/predlosci-oba
 import { PredlosciZaKretaljkuComponent } from './components/dynamic/predlosci-za-kretaljku/predlosci-za-kretaljku.component';
 import { TipOvrheComponent } from './components/dynamic/tip-ovrhe/tip-ovrhe.component';
 import { TvrtkeComponent } from './components/dynamic/tvrtke/tvrtke.component';
+import { StatusiComponent } from './components/dynamic/statusi/statusi.component';
 
 const routes: Routes = [
   { path: 'ovrhe', component: OvrheComponent, canActivate: [authGuard()] },
@@ -29,6 +30,7 @@ const routes: Routes = [
   { path: 'predlosci-za-kretaljku', component: PredlosciZaKretaljkuComponent, canActivate: [authGuard()] },
   { path: 'tip-ovrhe', component: TipOvrheComponent, canActivate: [authGuard()] },
   { path: 'tvrtke', component: TvrtkeComponent, canActivate: [authGuard()] },
+  { path: 'statusi', component: StatusiComponent, canActivate: [authGuard()] },
 
   { path: 'login', component: LoginComponent, canActivate: [noLoginGuard()] },
   { path: 'selection-screen', component: SelectionScreenComponent, canActivate: [authGuard()] },

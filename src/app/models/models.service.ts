@@ -121,6 +121,33 @@ export interface Tvrtke {
   SYSDATETIME: string;
 }
 
+export interface Statusi {
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFVLAS: string;
+  IDSTATUSA: string;
+  NAZIVSTATUSA: string;
+  IDTVRTKE: string;
+  JEZATVORENO: string;
+  AKTIVNOST: string;
+  IDKORISNIKA: string;
+  SYSDATETIME: string;
+}
+
+export interface KamatneStope {
+  UKUPANBROJSLOGOVA: number;
+  RN: number;
+  SIFVLAS: string;
+  IDKAMATNESTOPE: string;
+  IDTIPKAMATNESTOPE: string;
+  DATUMOD: string;
+  DATUMDO: string;
+  POSTOTAKKAMATA: string;
+  IDTVRTKE: string;
+  IDKORISNIKA: string;
+  SYSDATETIME: string;
+}
+
 // END: MODELS
 
 // START: session user

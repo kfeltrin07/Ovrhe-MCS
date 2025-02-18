@@ -125,7 +125,7 @@ export class CreateTvrtkeComponent implements OnInit {
       this.globalVar.APIHost + this.globalVar.APIFile,
       {
         action: 'Ovrhe',
-        method: 'updateOVR_TipOvrhe',
+        method: 'updateOVR_Tvrtke',
         sid: this.session.loggedInUser.sessionID,
         data: {
           pAkcija: CRUDAction.Update,

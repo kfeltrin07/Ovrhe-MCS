@@ -1,0 +1,119 @@
+<div class="colored-header text-align-center" cdkDrag cdkDragRootElement=".cdk-overlay-pane" cdkDragHandle cdkDragBoundary=".cdk-overlay-container">
+    {{ 'Editing' | translate }}
+    <mat-icon class="dialog-close-button" mat-dialog-close >close</mat-icon>
+
+</div>
+
+<mat-dialog-content class="small-margin-and-center-title">
+
+    <h2 mat-dialog-title class="text-align-center">
+        <mat-icon class="dialog-title-icon">person</mat-icon>
+        <mat-icon class="dialog-title-icon">add</mat-icon>
+        <span class="dialog-title">{{ 'KamatneStopeEditing' | translate }}</span>
+    </h2>
+
+
+    <div class="form-container">
+        <table>
+            <tr>
+                <td>
+                    <label for="IDKAMATNESTOPE" class="minimum-margin-top">{{ 'Code' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="IDKAMATNESTOPE" class="minimum-margin width-276-px" [(ngModel)]="kamatneStope!.IDKAMATNESTOPE"
+                        disabled placeholder="{{ 'Code' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="IDTIPKAMATNESTOPE" class="minimum-margin-top">{{ 'Name' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="IDTIPKAMATNESTOPE" class="minimum-margin width-276-px" [(ngModel)]="kamatneStope!.IDTIPKAMATNESTOPE"
+                        [class.input-color-valid]="kamatneStope!.IDTIPKAMATNESTOPE"
+                        [class.red-input]="!globalFn.checkValidity(kamatneStope!.IDTIPKAMATNESTOPE)"
+                        placeholder="{{ 'Name' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="POSTOTAKKAMATA" class="minimum-margin-top">{{ 'POSTOTAKKAMATA' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="POSTOTAKKAMATA" class="minimum-margin width-276-px" [(ngModel)]="kamatneStope!.POSTOTAKKAMATA"
+                        placeholder="{{ 'POSTOTAKKAMATA' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="DATUMOD" class="minimum-margin-top">{{ 'DATUMOD' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="DATUMOD" class="minimum-margin width-276-px" type="date" [(ngModel)]="kamatneStope!.DATUMOD"
+                        placeholder="{{ 'DATUMOD' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="DATUMDO" class="minimum-margin-top">{{ 'DATUMDO' | translate }}:</label>
+                </td>
+                <td></td>
+                <td>
+                    <input id="DATUMDO" class="minimum-margin width-276-px" type="date" [(ngModel)]="kamatneStope!.DATUMDO"
+                        placeholder="{{ 'DATUMDO' | translate }}">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="IDTVRTKE" class="minimum-margin-top">{{ 'IDTVRTKE' | translate }}:</label>
+                </td>
+                <td>
+                    <mat-icon matSuffix class="minimum-margin-left cursor-pointer display-flex" (click)="pickTvrtke();"
+                        (contextmenu)="removeTvrtke($event)"
+                        matTooltip="{{ (!kamatneStope.IDTVRTKE ? 'ClickToSelectFromDialogToFill' : '') | translate }}"
+                        [class.color-valid]="varNames.NAZIVTVRTKE">
+                        {{ varNames!.NAZIVTVRTKE ? 'done' : 'import_contacts'}}
+                    </mat-icon>
+                </td>
+                <td class="resultTD">
+                    <span (click)="refreshTvrtke(kamatneStope!.IDTVRTKE, false);">
+                        <input [class.red-input]="!globalFn.checkValidity(kamatneStope!.IDTVRTKE)" type="text"
+                            [(ngModel)]="kamatneStope!.IDTVRTKE" maxlength="22"
+                            class="minimum-margin-horizontal light-gray-background" style="width: 50px;"
+                            placeholder="{{ 'Code' | translate }}" id="offeredTvrtke-help-span"
+                            (blur)="OfferedTvrtke();resetTvrtkeIndex();" (ngModelChange)="filterTvrtke(kamatneStope!.IDTVRTKE);"
+                            (focus)="refreshTvrtke(kamatneStope!.IDTVRTKE, false);"
+                            (keyup.enter)="selectTvrtke(offeredTvrtke[TvrtkeDropdownIndex]);"
+                            (keyup.escape)="resetTvrtkeIndex();"
+                            (keyup.arrowdown)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex + 1) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);"
+                            (keyup.arrowup)="TvrtkeDropdownIndex = (TvrtkeDropdownIndex - 1 + offeredTvrtke.length) % offeredTvrtke.length;globalFn.scroll('offeredTvrtke-dropdown-'+TvrtkeDropdownIndex);">
+                        <div id="offeredTvrtke-dropdown" class="select-dropdown-content max-height-300px"
+                            style="z-index: 500;">
+                            <div [id]="'offeredTvrtke-dropdown-' + i" *ngFor="let konto of offeredTvrtke; index as i"
+                                matRipple class="dropdown-content-item display-flex align-items-center space-between"
+                                [class.gray-background]="i == TvrtkeDropdownIndex" (mousedown)="selectTvrtke(konto);">
+                                <span>
+                                    <b>{{ konto.IDTVRTKE }}</b> ({{ konto.NAZIVTVRTKE }})
+                                </span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="small-margin-left margin-right" matTooltip="{{ varNames!.NAZIVTVRTKE }}"
+                        matTooltipShowDelay="1000">{{
+                        varNames!.NAZIVTVRTKE }}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+    <button mat-button [mat-dialog-close]="true">{{ 'Cancel' | translate }}</button>
+    <button mat-raised-button type="button" color="primary" [mat-dialog-close]="true" (click)="save();"
+        [disabled]="validateForm(kamatneStope!)">{{ 'Create' | translate }}</button>
+</mat-dialog-actions>

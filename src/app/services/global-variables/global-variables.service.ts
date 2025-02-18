@@ -456,7 +456,7 @@ export class GlobalVariablesService {
     displayedName: 'MATICNIBROJTVRTKE',
     name: 'MATICNIBROJTVRTKE'
   };
-  
+
   public NAZIVTVRTKEOVRSITELJAColumn: ColumnRef = {
     displayedName: 'NAZIVTVRTKEOVRSITELJA',
     name: 'NAZIVTVRTKEOVRSITELJA'
@@ -523,6 +523,79 @@ export class GlobalVariablesService {
     this.PNBPREFIXPRAVNEOSOBEColumn,
     this.PNBPREFIXFIZICKEOSOBEColumn,
     this.IBANKARTICAColumn,
+    this.IDKORISNIKAColumn,
+    this.SYSDATETIMEColumn,
+  ];
+
+  public IDSTATUSAColumn: ColumnRef = {
+    displayedName: 'IDSTATUSA',
+    name: 'IDSTATUSA'
+  };
+
+  public JEZATVORENOColumn: ColumnRef = {
+    displayedName: 'JEZATVORENO',
+    name: 'JEZATVORENO'
+  };
+
+
+  public StatusiDisplayedColumns: ColumnRef[] = [
+    this.IDSTATUSAColumn,
+    this.NAZIVSTATUSAColumn,
+    this.IDTVRTKEColumn,
+    this.JEZATVORENOColumn,
+    this.AKTIVNOSTColumn,
+  ];
+  public StatusiColumnsList: ColumnRef[] = [
+    this.RNColumn,
+    this.IDSTATUSAColumn,
+    this.NAZIVSTATUSAColumn,
+    this.IDTVRTKEColumn,
+    this.JEZATVORENOColumn,
+    this.AKTIVNOSTColumn,
+    this.IDKORISNIKAColumn,
+    this.SYSDATETIMEColumn,
+  ];
+
+  public IDKAMATNESTOPEColumn: ColumnRef = {
+    displayedName: 'IDKAMATNESTOPE',
+    name: 'IDKAMATNESTOPE'
+  };
+
+  public IDTIPKAMATNESTOPEColumn: ColumnRef = {
+    displayedName: 'IDTIPKAMATNESTOPE',
+    name: 'IDTIPKAMATNESTOPE'
+  };
+
+  public DATUMODColumn: ColumnRef = {
+    displayedName: 'DATUMOD',
+    name: 'DATUMOD'
+  };
+
+  public DATUMDOColumn: ColumnRef = {
+    displayedName: 'DATUMDO',
+    name: 'DATUMDO'
+  };
+
+  public POSTOTAKKAMATAColumn: ColumnRef = {
+    displayedName: 'POSTOTAKKAMATA',
+    name: 'POSTOTAKKAMATA'
+  };
+
+  public KamatneStopeDisplayedColumns: ColumnRef[] = [
+    this.IDKAMATNESTOPEColumn,
+    this.IDTIPKAMATNESTOPEColumn,
+    this.DATUMODColumn,
+    this.DATUMDOColumn,
+    this.POSTOTAKKAMATAColumn,
+  ];
+  public KamatneStopeColumnsList: ColumnRef[] = [
+    this.RNColumn,
+    this.IDKAMATNESTOPEColumn,
+    this.IDTIPKAMATNESTOPEColumn,
+    this.DATUMODColumn,
+    this.DATUMDOColumn,
+    this.POSTOTAKKAMATAColumn,
+    this.IDTVRTKEColumn,
     this.IDKORISNIKAColumn,
     this.SYSDATETIMEColumn,
   ];
@@ -682,6 +755,15 @@ export class GlobalVariablesService {
           rightsState: 1,
           open: false
         },
+        {
+          namePrefix: '',
+          name: 'Statusi',
+          icon: 'query_stats',
+          url: '/statusi',
+          highlighted: false,
+          rightsState: 1,
+          open: false
+        },
       ]
     },
   ];
@@ -695,6 +777,111 @@ export class GlobalVariablesService {
   ];
 
   public dashboardItems: DashboardItem[] = [
+    {
+      name: 'Ovrhe',
+      icon: 'gavel',
+      rowHeight: 1,
+      rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+      items: [],
+      url: '/ovrhe'
+    },
+    {
+      name: 'Izvjestaji',
+      icon: 'now_widgets',
+      rowHeight: 1,
+      rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+      items: [],
+      url: '/izvjestaji'
+    },
+    {
+      name: 'Codebooks',
+      icon: 'point_of_sale',
+      rowHeight: 2,
+      rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+      items: [
+        {
+          name: 'VrsteRadnji',
+          icon: 'post_add',
+          url: '/vrste-radnji',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+        },
+        {
+          name: 'StatusiRadnji',
+          icon: 'layers',
+          url: '/statusi-radnji',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+        },
+        {
+          name: 'StatusiOvrhe',
+          icon: 'local_library',
+          url: '/statusi-ovrhe',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+        },
+        {
+          name: 'TipOvrhe',
+          icon: 'grid_3x3',
+          url: '/tip-ovrhe',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+        },
+        {
+          name: 'GrupaTroskova',
+          icon: 'account_balance_wallet',
+          url: '/grupe-troskova',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+
+        },
+        {
+          name: 'Troskovi',
+          icon: 'credit_card',
+          url: '/troskovi',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+
+        },
+        {
+          name: 'PredlosciZaKretaljku',
+          icon: 'bookmarks',
+          url: '/predlosci-za-kretaljku',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+
+        },
+        {
+          name: 'KamatneStope',
+          icon: 'show_chart',
+          url: '/kamatne-stope',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+
+        },
+        {
+          name: 'PredlosciObavijesti',
+          icon: 'feed',
+          url: '/predlosci-obavijesti',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+
+        }
+      ],
+      url: ''
+    },
+    {
+      name: 'Administration',
+      icon: 'settings',
+      rowHeight: 1,
+      rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+      items: [
+        {
+          name: 'Tvrtke',
+          icon: 'house',
+          url: '/tvrtke',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+        },
+        {
+          name: 'Statusi',
+          icon: 'query_stats',
+          url: '/statusi',
+          rightsState: this.useDynamicMenus ? RightsState.Invisible : RightsState.Editable,
+        },
+      ],
+      url: ''
+    },
 
   ];
 
